@@ -30,11 +30,11 @@ translate([0, 0, 7])
     color("DarkGray", 1)
         directionalCrossPiece(
             button_x_y_size = 20,
-            button_z_size = 3,
+            button_z_size = 4,
             button_thickness = 6,
             button_round_edges_radius = 1,
-            support_x_y_size = 23,
-            support_z_size = 1,
+            support_x_y_size = 22,
+            support_z_size = 0.5,
             $fn = 150
         );
 
