@@ -76,3 +76,16 @@ module directionalCrossPiece(
         }
     }
 }
+
+
+
+color("DarkGray", 1)
+    directionalCrossPiece(
+        button_x_y_size = 20,
+        button_z_size = 4,
+        button_thickness = 6,
+        button_round_edges_radius = 1,
+        support_x_y_size = 22,
+        support_z_size = 1,
+        $fn = 150
+    );
