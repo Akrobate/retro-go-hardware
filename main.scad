@@ -34,7 +34,7 @@ translate([0, 0, 7])
             button_thickness = 6,
             button_round_edges_radius = 1,
             support_x_y_size = 22,
-            support_z_size = 0.5,
+            support_z_size = 1,
             $fn = 150
         );
 
