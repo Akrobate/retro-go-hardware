@@ -1,59 +1,93 @@
-use <./pieces/subpieces/rounded-pane.scad>
-use <./pieces/subpieces/rounded-cube.scad>
 use <./pieces/subpieces/directional-cross.scad>
+use <./pieces/subpieces/controller-breadboard-facade.scad>
 use <./pieces/subpieces/breadboard.scad>
 use <./pieces/subpieces/simple-button.scad>
 
-use <./pieces/subpieces/directional-cross-facade.scad>
-
 use <./pieces/directional-cross-piece.scad>
+use <./pieces/a-b-button-piece.scad>
+use <./pieces/small-button-piece.scad>
+
+breadboard_x_size_point = 28;
+breadboard_y_size_point = 9;
+
+button_throw_margin = 1;
+
+cross_button_x_y_size = 20;
+cross_button_thickness = 6;
+cross_button_round_edges_radius = 1;
+a_b_button_diameter = 8;
+small_button_diameter = 6;
+
+directional_cross_points_coords = [5, 5];
+start_button_points_coords = [14, 3];
+select_button_points_coords = [18, 3];
+menu_button_points_coords = [14, 7];
+option_button_points_coords = [18, 7];
+a_button_points_coords = [23, 4];
+b_button_points_coords = [27, 6];
+bolt_throws_list = [
+    [2, 2],
+    [2, 8],
+    [10, 2],
+    [10, 8],
+    [27, 2],
+    [23, 8],
+];
 
 
 module directionalCrossElectronicCard() {
-    breadboard(9 + 9 + 9 + 2, 9, z_size = 1.5, $fn = 30);
+    breadboard(breadboard_x_size_point, breadboard_y_size_point, throw_3mm_coord_list = bolt_throws_list, z_size = 1.5, $fn = 30);
 
-    // cross
-    translateBreadboard(2, 5, 1.5)
-        simpleButton(center = true, $fn=20);
-
-    translateBreadboard(8, 5, 1.5)
-        simpleButton(center = true, $fn=20);
-
-    translateBreadboard(5, 2, 1.5)
-        simpleButton(center = true, $fn=20);
-
-    translateBreadboard(5, 8, 1.5)
-        simpleButton(center = true, $fn=20);
-
-
-    // start select
-    translateBreadboard(14, 3, 1.5)
-        simpleButton(center = true, $fn=20);
-    translateBreadboard(17, 3, 1.5)
-        simpleButton(center = true, $fn=20);
-
-    // Menu option
-    translateBreadboard(14, 7, 1.5)
-        simpleButton(center = true, $fn=20);
-    translateBreadboard(17, 7, 1.5)
-        simpleButton(center = true, $fn=20);
-
-    // A / B
-    translateBreadboard(23, 4, 1.5)
-        simpleButton(center = true, $fn=20);
-    translateBreadboard(28, 6, 1.5)
-        simpleButton(center = true, $fn=20);
-
-
-
+    placeCrossElectronicButton(directional_cross_points_coords, 1.5, $fn = 20);
+    placeStandartElectronicButton(start_button_points_coords, 1.5, $fn = 20);
+    placeStandartElectronicButton(select_button_points_coords, 1.5, $fn = 20);
+    placeStandartElectronicButton(menu_button_points_coords, 1.5, $fn = 20);
+    placeStandartElectronicButton(option_button_points_coords, 1.5, $fn = 20);
+    placeStandartElectronicButton(a_button_points_coords, 1.5, $fn = 20);
+    placeStandartElectronicButton(b_button_points_coords, 1.5, $fn = 20);
 }
 
-    
+
+module placeStandartElectronicButton(point_coords, z, $fn = $fn) {
+    translateBreadboard(point_coords[0], point_coords[1], z)
+        simpleButton(center = true, $fn = $fn);
+}
+
+
+module placeCrossElectronicButton(point_coords, z, $fn = $fn) {
+    for (coords = [[0, 3], [3, 0], [0, -3], [-3, 0]])
+        translateBreadboard(point_coords[0] + coords[0], point_coords[1] + coords[1], z)
+            simpleButton(center = true, $fn = $fn);
+}
+
+
+translate([0,0,10])
+    %controllerBreadboardFacade(
+        x_points = breadboard_x_size_point,
+        y_points = breadboard_y_size_point,
+        z_size = 2,
+        directional_cross_points_coords = directional_cross_points_coords,
+        start_button_points_coords = start_button_points_coords,
+        select_button_points_coords = select_button_points_coords,
+        menu_button_points_coords = menu_button_points_coords,
+        option_button_points_coords = option_button_points_coords,
+        a_button_points_coords = a_button_points_coords,
+        b_button_points_coords = b_button_points_coords,
+        
+        cross_button_x_y_size = cross_button_x_y_size + button_throw_margin,
+        cross_button_thickness = cross_button_thickness + button_throw_margin,
+        cross_button_round_edges_radius = cross_button_round_edges_radius,
+        a_b_button_diameter = a_b_button_diameter + button_throw_margin,
+        small_button_diameter = small_button_diameter + button_throw_margin,
+
+        bolt_throws_list = bolt_throws_list,
+        $fn = 100
+    );
+
 directionalCrossElectronicCard();
 
 
-if (0) {
-translate([0, 0, 7])
+translateBreadboard(directional_cross_points_coords[0], directional_cross_points_coords[1], 10 - 1)
     color("DarkGray", 1)
         directionalCrossPiece(
             button_x_y_size = 20,
@@ -65,20 +99,23 @@ translate([0, 0, 7])
             $fn = 150
         );
 
-    translateBreadboard(-5, -5)
-        directionalCrossElectronicCard();
-}
+// A button
+for (coords = [a_button_points_coords, b_button_points_coords])
+    translateBreadboard(coords[0], coords[1], 10 - 1)
+        abButtonPiece(
+            diameter = a_b_button_diameter,
+            button_z_size = 3,
+            support_diameter = a_b_button_diameter + 2,
+            support_z_size = 1,
+            $fn = 80
+        );
 
-if (0) {
-translate([0,0, 9.1])
-directionnalCrossFacade(
-    cross_button_x_y_size = 20 + 1,
-    cross_button_thickness = 6 + 1,
-    cross_button_round_edges_radius = 1,
-    facade_x_size = 40,
-    facade_y_size = 40,
-    facade_z_size = 2,
-    center = true,
-    $fn = 150
-);
-}
+for (coords = [menu_button_points_coords, option_button_points_coords, start_button_points_coords, select_button_points_coords])
+    translateBreadboard(coords[0], coords[1], 10 - 1)
+        smallButtonPiece(
+            diameter = small_button_diameter,
+            button_z_size = 3,
+            support_diameter = small_button_diameter + 2,
+            support_z_size = 1,
+            $fn = 80
+        );
