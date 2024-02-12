@@ -2,6 +2,8 @@
 use <./breadboard.scad>
 use <./directional-cross.scad>
 use <../../enveloppes/bolt.scad>
+use <./rounded-pane.scad>
+
 
 module controllerBreadboardFacade(
     x_points,
@@ -71,4 +73,63 @@ module drawThrowsList(throws_coords_list, z_size) {
     for (coords = throws_coords_list)
         translateBreadboard(coords[0], coords[1])
             bolt();
+}
+
+
+
+module controllerBreadboardBorder(
+    facade_x_points,
+    facade_y_points,
+    z_size,
+    border_margin_size_x,
+    border_margin_size_y,
+    rounded_border_1,
+    rounded_border_2
+) {
+    roundedPane(
+        [
+            getSizeFromPointCount(facade_x_points) + border_margin_size_x * 2,
+            getSizeFromPointCount(facade_y_points) + border_margin_size_y * 2,
+            z_size,
+        ],
+        rounded_border_1,
+        rounded_border_2
+    );
+}
+
+
+
+module controllerBreadboardBorderDecoractor(
+    facade_x_points,
+    facade_y_points,
+    z_size,
+    border_margin_size_x,
+    border_margin_size_y,
+    rounded_border_1,
+    rounded_border_2,
+) {
+    union() {
+        translate([-border_margin_size_x, -border_margin_size_y])
+            difference() {
+                controllerBreadboardBorder(
+                    facade_x_points = facade_x_points,
+                    facade_y_points = facade_y_points,
+                    z_size = z_size,
+                    border_margin_size_x = border_margin_size_x,
+                    border_margin_size_y = border_margin_size_y,
+                    rounded_border_1 = rounded_border_1,
+                    rounded_border_2 = rounded_border_2
+                );
+
+                translate([border_margin_size_x, border_margin_size_y, -z_size / 2])
+                    cube(
+                        [
+                            getSizeFromPointCount(facade_x_points),
+                            getSizeFromPointCount(facade_y_points),
+                            z_size * 2,
+                        ]
+                    );
+            }
+        children();
+    }
 }
