@@ -1,40 +1,16 @@
 use <./subpieces/directional-cross.scad>
 use <./subpieces/rounded-pane.scad>
 
-module directionalCrossPieceCircularSupport(
-    button_x_y_size,
-    button_z_size,
-    button_thickness,
-    button_round_edges_radius,
-    support_x_y_size,
-    support_z_size,
-    $fn
-) {
-    union() {
-        translate([0,0, (button_z_size + support_z_size)/ 2]) {
-            directionalCross(
-                button_x_y_size,
-                button_x_y_size,
-                button_z_size + support_z_size,
-                button_thickness,
-                button_round_edges_radius,
-                $fn = $fn
-            );
-        }
-        cylinder(d = support_x_y_size, h = support_z_size, $fn = $fn);
-    }
-}
-
-
+include <../configurations/global.scad>
 
 module directionalCrossPiece(
-    button_x_y_size,
-    button_z_size,
-    button_thickness,
-    button_round_edges_radius,
-    support_x_y_size,
-    support_z_size,
-    $fn
+    button_x_y_size = controller_cross_button_x_y_size,
+    button_z_size = controller_cross_button_z_size,
+    button_thickness = controller_cross_button_thickness,
+    button_round_edges_radius = controller_cross_button_round_edges_radius,
+    support_x_y_size = controller_cross_button_support_x_y_size,
+    support_z_size = controller_cross_button_support_z_size,
+    $fn = controller_cross_button_fn
 ) {
     union() {
         translate([0,0, (button_z_size + support_z_size) / 2]) {
@@ -77,15 +53,4 @@ module directionalCrossPiece(
     }
 }
 
-
-
-color("DarkGray", 1)
-    directionalCrossPiece(
-        button_x_y_size = 20,
-        button_z_size = 4,
-        button_thickness = 6,
-        button_round_edges_radius = 1,
-        support_x_y_size = 22,
-        support_z_size = 1,
-        $fn = 150
-    );
+directionalCrossPiece();
