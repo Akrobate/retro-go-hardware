@@ -15,8 +15,10 @@ button_throw_margin = 1;
 cross_button_x_y_size = 20;
 cross_button_thickness = 6;
 cross_button_round_edges_radius = 1;
-a_b_button_diameter = 8;
-small_button_diameter = 6;
+a_b_button_diameter = 7;
+a_b_button_z_size = 4;
+small_button_diameter = 5;
+small_button_z_size = 3;
 
 directional_cross_points_coords = [5, 5];
 start_button_points_coords = [14, 3];
@@ -86,7 +88,6 @@ translate([0,0,10])
 
 directionalCrossElectronicCard();
 
-
 translateBreadboard(directional_cross_points_coords[0], directional_cross_points_coords[1], 10 - 1)
     color("DarkGray", 1)
         directionalCrossPiece(
@@ -99,12 +100,11 @@ translateBreadboard(directional_cross_points_coords[0], directional_cross_points
             $fn = 150
         );
 
-// A button
 for (coords = [a_button_points_coords, b_button_points_coords])
     translateBreadboard(coords[0], coords[1], 10 - 1)
         abButtonPiece(
             diameter = a_b_button_diameter,
-            button_z_size = 3,
+            button_z_size = a_b_button_z_size,
             support_diameter = a_b_button_diameter + 2,
             support_z_size = 1,
             $fn = 80
@@ -114,7 +114,7 @@ for (coords = [menu_button_points_coords, option_button_points_coords, start_but
     translateBreadboard(coords[0], coords[1], 10 - 1)
         smallButtonPiece(
             diameter = small_button_diameter,
-            button_z_size = 3,
+            button_z_size = small_button_z_size,
             support_diameter = small_button_diameter + 2,
             support_z_size = 1,
             $fn = 80
