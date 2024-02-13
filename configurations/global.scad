@@ -5,9 +5,10 @@ controller_facade_z_size = 2;
 controller_facade_button_throw_margin = 1;
 
 controller_facade_border_rounded_border_1 = 5;
-controller_facade_border_rounded_border_2 = 5;
-controller_facade_border_margin_size_x = 10;
+controller_facade_border_rounded_border_2 = 4;
+controller_facade_border_margin_size_x = 2;
 controller_facade_border_margin_size_y = 10;
+controller_facade_border_throws_margin = 5;
 controller_facade_border_fn = 80;
 
 // Cross Button
@@ -33,7 +34,7 @@ controller_small_button_support_diameter = 7;
 controller_small_button_support_z_size = 1;
 controller_small_button_fn = 80;
 
-controller_directional_cross_points_coords = [5, 5];
+controller_directional_cross_points_coords = [6, 5];
 controller_start_button_points_coords = [14, 3];
 controller_select_button_points_coords = [18, 3];
 controller_menu_button_points_coords = [14, 7];

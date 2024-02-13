@@ -63,40 +63,24 @@ module controllerBreadboardFacade(
                     $fn = $fn
                 );
 
-        drawThrowsList(bolt_throws_list, z_size);
+        drawThrowsListByBreadbordCoords(bolt_throws_list);
     }
 }
 
 
 
-module drawThrowsList(throws_coords_list, z_size) {
+module drawThrowsListByBreadbordCoords(throws_coords_list) {
     for (coords = throws_coords_list)
         translateBreadboard(coords[0], coords[1])
             bolt();
 }
 
 
-
-module controllerBreadboardBorder(
-    facade_x_points,
-    facade_y_points,
-    z_size,
-    border_margin_size_x,
-    border_margin_size_y,
-    rounded_border_1,
-    rounded_border_2
-) {
-    roundedPane(
-        [
-            getSizeFromPointCount(facade_x_points) + border_margin_size_x * 2,
-            getSizeFromPointCount(facade_y_points) + border_margin_size_y * 2,
-            z_size,
-        ],
-        rounded_border_1,
-        rounded_border_2
-    );
+module drawThrowsList(throws_coords_list) {
+    for (coords = throws_coords_list)
+        translate([coords[0], coords[1], 0])
+            bolt();
 }
-
 
 
 module controllerBreadboardBorderDecoractor(
@@ -107,19 +91,24 @@ module controllerBreadboardBorderDecoractor(
     border_margin_size_y,
     rounded_border_1,
     rounded_border_2,
+    border_throws_margin = 0,
+    $fn,
 ) {
+
+    facade_full_x_size = getSizeFromPointCount(facade_x_points) + border_margin_size_x * 2;
+    facade_full_y_size = getSizeFromPointCount(facade_y_points) + border_margin_size_y * 2;
+
+
     union() {
         translate([-border_margin_size_x, -border_margin_size_y])
             difference() {
-                controllerBreadboardBorder(
-                    facade_x_points = facade_x_points,
-                    facade_y_points = facade_y_points,
-                    z_size = z_size,
-                    border_margin_size_x = border_margin_size_x,
-                    border_margin_size_y = border_margin_size_y,
-                    rounded_border_1 = rounded_border_1,
-                    rounded_border_2 = rounded_border_2
-                );
+                //color("red")
+                    roundedPane(
+                        [facade_full_x_size, facade_full_y_size, z_size],
+                        rounded_border_1,
+                        rounded_border_2,
+                        $fn = $fn
+                    );
 
                 translate([border_margin_size_x, border_margin_size_y, -z_size / 2])
                     cube(
@@ -129,6 +118,17 @@ module controllerBreadboardBorderDecoractor(
                             z_size * 2,
                         ]
                     );
+
+                if (border_throws_margin > 0)
+                    drawThrowsList([
+                        [border_throws_margin, border_throws_margin],
+                        [facade_full_x_size - border_throws_margin, border_throws_margin],
+                        [border_throws_margin, facade_full_y_size - border_throws_margin],
+                        [facade_full_x_size - border_throws_margin, facade_full_y_size - border_throws_margin],
+                        [facade_full_x_size / 2, facade_full_y_size - border_throws_margin],
+                        [facade_full_x_size / 2, border_throws_margin],
+                    ]);
+
             }
         children();
     }

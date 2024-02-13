@@ -11,6 +11,7 @@ module controllerFacadePiece(
     border_margin_size_y = controller_facade_border_margin_size_y,
     border_rounded_border_1 = controller_facade_border_rounded_border_1,
     border_rounded_border_2 = controller_facade_border_rounded_border_2,
+    border_throws_margin = controller_facade_border_throws_margin,
     border_fn = controller_facade_border_fn,
     
     button_throw_margin = controller_facade_button_throw_margin,
@@ -35,10 +36,11 @@ module controllerFacadePiece(
             facade_x_points = breadboard_x_size_point,
             facade_y_points = breadboard_y_size_point,
             z_size = z_size,
-            border_margin_size_x = 10,
-            border_margin_size_y = 10,
+            border_margin_size_x = border_margin_size_x,
+            border_margin_size_y = border_margin_size_y,
             rounded_border_1 = border_rounded_border_1,
             rounded_border_2 = border_rounded_border_2,
+            border_throws_margin = border_throws_margin,
             $fn = border_fn
         )
             controllerBreadboardFacade(

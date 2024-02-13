@@ -49,21 +49,24 @@ module gamePadComponent(
     small_button_points_coords_list = [controller_start_button_points_coords, controller_select_button_points_coords, controller_menu_button_points_coords, controller_option_button_points_coords],
     a_b_button_points_coors_list = [controller_a_button_points_coords, controller_b_button_points_coords]
 ) {
+
+    margin_facade_breadboard = 8;
+
     directionalCrossElectronicCard();
 
-    translate([0,0,10])
+    translate([0,0,margin_facade_breadboard])
         controllerFacadePiece();
 
-    translateBreadboard(directional_cross_points_coords[0], directional_cross_points_coords[1], 10 - 1)
+    translateBreadboard(directional_cross_points_coords[0], directional_cross_points_coords[1], margin_facade_breadboard - 1)
         color("DarkGray")
             directionalCrossPiece();
 
     for (coords = a_b_button_points_coors_list)
-        translateBreadboard(coords[0], coords[1], 10 - 1)
+        translateBreadboard(coords[0], coords[1], margin_facade_breadboard - 1)
             abButtonPiece();
 
     for (coords = small_button_points_coords_list)
-        translateBreadboard(coords[0], coords[1], 10 - 1)
+        translateBreadboard(coords[0], coords[1], margin_facade_breadboard - 1)
             smallButtonPiece();
 }
 
