@@ -1,12 +1,13 @@
 use <./subpieces/round-button.scad>
 
+include <../configurations/global.scad>
 
 module smallButtonPiece(
-    diameter,
-    button_z_size,
-    support_diameter,
-    support_z_size,
-    $fn
+    diameter = controller_small_button_diameter,
+    button_z_size = controller_small_button_z_size,
+    support_diameter = controller_small_button_support_diameter,
+    support_z_size = controller_small_button_support_z_size,
+    $fn = controller_small_button_fn
 ) {
 
     color("DarkSlateGray")
@@ -18,3 +19,5 @@ module smallButtonPiece(
             $fn = $fn
         );
 }
+
+smallButtonPiece();

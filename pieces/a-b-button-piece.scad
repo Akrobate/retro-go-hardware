@@ -1,12 +1,13 @@
 use <./subpieces/round-button.scad>
 
+include <../configurations/global.scad>
 
 module abButtonPiece(
-    diameter,
-    button_z_size,
-    support_diameter,
-    support_z_size,
-    $fn
+    diameter = controller_a_b_button_diameter,
+    button_z_size = controller_a_b_button_z_size,
+    support_diameter = controller_a_b_button_support_diameter,
+    support_z_size = controller_a_b_button_support_z_size,
+    $fn = controller_a_b_button_fn
 ) {
 
     color("Crimson")
@@ -18,3 +19,5 @@ module abButtonPiece(
             $fn = $fn
         );
 }
+
+abButtonPiece();
