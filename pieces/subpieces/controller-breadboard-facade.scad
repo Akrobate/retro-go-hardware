@@ -87,17 +87,22 @@ module controllerBreadboardBorderDecoractor(
     facade_x_points,
     facade_y_points,
     z_size,
-    border_margin_size_x,
-    border_margin_size_y,
+    facade_with_border_x_size,
+    facade_with_border_y_size,
     rounded_border_1,
     rounded_border_2,
     border_throws_margin = 0,
     $fn,
 ) {
 
-    facade_full_x_size = getSizeFromPointCount(facade_x_points) + border_margin_size_x * 2;
-    facade_full_y_size = getSizeFromPointCount(facade_y_points) + border_margin_size_y * 2;
+    facade_full_x_size = facade_with_border_x_size;
+    facade_full_y_size = facade_with_border_y_size;
 
+    border_margin_size_x = (facade_with_border_x_size - getSizeFromPointCount(facade_x_points)) / 2;
+    border_margin_size_y = (facade_with_border_y_size - getSizeFromPointCount(facade_y_points)) / 2;
+
+    echo("facade_full_x_size", facade_full_x_size);
+    echo("facade_full_y_size", facade_full_y_size);
 
     union() {
         translate([-border_margin_size_x, -border_margin_size_y])
