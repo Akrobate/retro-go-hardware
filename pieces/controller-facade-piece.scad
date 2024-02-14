@@ -7,8 +7,9 @@ module controllerFacadePiece(
     breadboard_y_size_point = controller_breadboard_y_size_point,
     z_size = controller_facade_z_size,
     
-    border_margin_size_x = controller_facade_border_margin_size_x,
-    border_margin_size_y = controller_facade_border_margin_size_y,
+    facade_with_border_x_size = controller_facade_with_border_x_size,
+    facade_with_border_y_size = controller_facade_with_border_y_size,
+
     border_rounded_border_1 = controller_facade_border_rounded_border_1,
     border_rounded_border_2 = controller_facade_border_rounded_border_2,
     border_throws_margin = controller_facade_border_throws_margin,
@@ -35,9 +36,11 @@ module controllerFacadePiece(
         controllerBreadboardBorderDecoractor(
             facade_x_points = breadboard_x_size_point,
             facade_y_points = breadboard_y_size_point,
+
             z_size = z_size,
-            border_margin_size_x = border_margin_size_x,
-            border_margin_size_y = border_margin_size_y,
+            facade_with_border_x_size = facade_with_border_x_size,
+            facade_with_border_y_size = facade_with_border_y_size,
+
             rounded_border_1 = border_rounded_border_1,
             rounded_border_2 = border_rounded_border_2,
             border_throws_margin = border_throws_margin,

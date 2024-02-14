@@ -1,3 +1,4 @@
+// Controller facade
 controller_breadboard_x_size_point = 28;
 controller_breadboard_y_size_point = 9;
 
@@ -6,8 +7,10 @@ controller_facade_button_throw_margin = 1;
 
 controller_facade_border_rounded_border_1 = 5;
 controller_facade_border_rounded_border_2 = 4;
-controller_facade_border_margin_size_x = 2;
-controller_facade_border_margin_size_y = 10;
+
+controller_facade_with_border_x_size = 78;
+controller_facade_with_border_y_size = 45;
+
 controller_facade_border_throws_margin = 5;
 controller_facade_border_fn = 80;
 
