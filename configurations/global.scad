@@ -1,3 +1,11 @@
+// faccade top
+facade_front_x_size = 80;
+facade_front_y_size = 120;
+facade_front_z_size = 5;
+facade_front_round_edges_radius = 5;
+
+facade_front_fn = 80;
+
 // Controller facade
 controller_breadboard_x_size_point = 28;
 controller_breadboard_y_size_point = 9;
