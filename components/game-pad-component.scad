@@ -6,6 +6,8 @@ use <./../pieces/directional-cross-piece.scad>
 use <./../pieces/a-b-button-piece.scad>
 use <./../pieces/small-button-piece.scad>
 
+use <../libraries/electronics.scad>
+
 include <../configurations/global.scad>
 
 module directionalCrossElectronicCard(
@@ -47,27 +49,37 @@ module placeCrossElectronicButton(point_coords, z, $fn = $fn) {
 module gamePadComponent(
     directional_cross_points_coords = controller_directional_cross_points_coords,
     small_button_points_coords_list = [controller_start_button_points_coords, controller_select_button_points_coords, controller_menu_button_points_coords, controller_option_button_points_coords],
-    a_b_button_points_coors_list = [controller_a_button_points_coords, controller_b_button_points_coords]
+    a_b_button_points_coors_list = [controller_a_button_points_coords, controller_b_button_points_coords],
+
+    breadboard_x_size_point = controller_breadboard_x_size_point,
+    breadboard_y_size_point = controller_breadboard_y_size_point,
+
+    facade_with_border_x_size = controller_facade_with_border_x_size,
+    facade_with_border_y_size = controller_facade_with_border_y_size
 ) {
 
     margin_facade_breadboard = 8;
+    border_margin_size_x = (facade_with_border_x_size - getSizeFromPointCount(breadboard_x_size_point)) / 2;
+    border_margin_size_y = (facade_with_border_y_size - getSizeFromPointCount(breadboard_y_size_point)) / 2;
 
-    directionalCrossElectronicCard();
+    controllerFacadePiece();
 
-    translate([0,0,margin_facade_breadboard])
-        controllerFacadePiece();
+    translate([border_margin_size_x, border_margin_size_y]) {
+        translate([0,0, -margin_facade_breadboard])    
+            directionalCrossElectronicCard();
 
-    translateBreadboard(directional_cross_points_coords[0], directional_cross_points_coords[1], margin_facade_breadboard - 1)
-        color("DarkGray")
-            directionalCrossPiece();
+        translateBreadboard(directional_cross_points_coords[0], directional_cross_points_coords[1], -1)
+            color("DarkGray")
+                directionalCrossPiece();
 
-    for (coords = a_b_button_points_coors_list)
-        translateBreadboard(coords[0], coords[1], margin_facade_breadboard - 1)
-            abButtonPiece();
+        for (coords = a_b_button_points_coors_list)
+            translateBreadboard(coords[0], coords[1], -1)
+                abButtonPiece();
 
-    for (coords = small_button_points_coords_list)
-        translateBreadboard(coords[0], coords[1], margin_facade_breadboard - 1)
-            smallButtonPiece();
+        for (coords = small_button_points_coords_list)
+            translateBreadboard(coords[0], coords[1], -1)
+                smallButtonPiece();
+    }
 }
 
 
