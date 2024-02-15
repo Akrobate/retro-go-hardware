@@ -1,5 +1,6 @@
 
 use <./breadboard.scad>
+use <../../libraries/electronics.scad>
 use <./directional-cross.scad>
 use <../../enveloppes/bolt.scad>
 use <./rounded-pane.scad>
@@ -95,46 +96,43 @@ module controllerBreadboardBorderDecoractor(
     $fn,
 ) {
 
-    facade_full_x_size = facade_with_border_x_size;
-    facade_full_y_size = facade_with_border_y_size;
-
     border_margin_size_x = (facade_with_border_x_size - getSizeFromPointCount(facade_x_points)) / 2;
     border_margin_size_y = (facade_with_border_y_size - getSizeFromPointCount(facade_y_points)) / 2;
 
-    echo("facade_full_x_size", facade_full_x_size);
-    echo("facade_full_y_size", facade_full_y_size);
+    echo("facade_with_border_x_size", facade_with_border_x_size);
+    echo("facade_with_border_y_size", facade_with_border_y_size);
 
     union() {
-        translate([-border_margin_size_x, -border_margin_size_y])
-            difference() {
-                //color("red")
-                    roundedPane(
-                        [facade_full_x_size, facade_full_y_size, z_size],
-                        rounded_border_1,
-                        rounded_border_2,
-                        $fn = $fn
-                    );
+        difference() {
+            //color("red")
+                roundedPane(
+                    [facade_with_border_x_size, facade_with_border_y_size, z_size],
+                    rounded_border_1,
+                    rounded_border_2,
+                    $fn = $fn
+                );
 
-                translate([border_margin_size_x, border_margin_size_y, -z_size / 2])
-                    cube(
-                        [
-                            getSizeFromPointCount(facade_x_points),
-                            getSizeFromPointCount(facade_y_points),
-                            z_size * 2,
-                        ]
-                    );
+            translate([border_margin_size_x, border_margin_size_y, -z_size / 2])
+                cube(
+                    [
+                        getSizeFromPointCount(facade_x_points),
+                        getSizeFromPointCount(facade_y_points),
+                        z_size * 2,
+                    ]
+                );
 
-                if (border_throws_margin > 0)
-                    drawThrowsList([
-                        [border_throws_margin, border_throws_margin],
-                        [facade_full_x_size - border_throws_margin, border_throws_margin],
-                        [border_throws_margin, facade_full_y_size - border_throws_margin],
-                        [facade_full_x_size - border_throws_margin, facade_full_y_size - border_throws_margin],
-                        [facade_full_x_size / 2, facade_full_y_size - border_throws_margin],
-                        [facade_full_x_size / 2, border_throws_margin],
-                    ]);
+            if (border_throws_margin > 0)
+                drawThrowsList([
+                    [border_throws_margin, border_throws_margin],
+                    [facade_with_border_x_size - border_throws_margin, border_throws_margin],
+                    [border_throws_margin, facade_with_border_y_size - border_throws_margin],
+                    [facade_with_border_x_size - border_throws_margin, facade_with_border_y_size - border_throws_margin],
+                    [facade_with_border_x_size / 2, facade_with_border_y_size - border_throws_margin],
+                    [facade_with_border_x_size / 2, border_throws_margin],
+                ]);
 
-            }
-        children();
+        }
+        translate([border_margin_size_x, border_margin_size_y])
+            children();
     }
 }
