@@ -1,6 +1,6 @@
 // faccade top
 facade_front_x_size = 90;
-facade_front_y_size = 120;
+facade_front_y_size = 145;
 facade_front_z_size = 5;
 facade_front_round_edges_radius = 5;
 

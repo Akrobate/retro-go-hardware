@@ -5,6 +5,7 @@ module breadboard(
     y_points,
     z_size = 1.5,
     throw_3mm_coord_list = [],
+    draw_throws = true,
     center = false,
     $fn = $fn
 ) {
@@ -17,15 +18,24 @@ module breadboard(
         difference() {
             color("DarkOrange")
                 cube([x_size, y_size, z_size], center = false);
-            for (x_index = [0 : x_points + 1]) {
-                for (y_index = [0 : y_points + 1]) {
-                    breadboardThrow(x_index, y_index, z_size, throw_diameter, $fn = $fn);
+
+            if (draw_throws) {
+                for (x_index = [0 : x_points + 1]) {
+                    for (y_index = [0 : y_points + 1]) {
+                        breadboardThrow(x_index, y_index, z_size, throw_diameter, $fn = $fn);
+                    }
                 }
+            } else {
+                breadboardThrow(x_points + 1, y_points + 1, z_size, throw_diameter, $fn = $fn);
+                breadboardThrow(x_points + 1, 0, z_size, throw_diameter, $fn = $fn);
+                breadboardThrow(0, y_points + 1, z_size, throw_diameter, $fn = $fn);
+                breadboardThrow(0, 0, z_size, throw_diameter, $fn = $fn);
             }
 
             for (throw_3mm_coord = throw_3mm_coord_list) {
                 breadboardThrow(throw_3mm_coord[0], throw_3mm_coord[1], z_size, 3, $fn = $fn);
             }
+
         }
     }
 
