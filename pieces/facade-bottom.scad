@@ -5,9 +5,9 @@ use <./subpieces/rounded-pane.scad>
 
 
 module facadeBottom(
-    x_size = facade_front_x_size,
-    y_size = facade_front_y_size,
-    z_size = facade_front_z_size,
+    x_size = case_external_x_size,
+    y_size = case_external_y_size,
+    z_size = case_external_panes_thickness,
 
     facade_throws_margin = 5,
 

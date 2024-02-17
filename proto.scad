@@ -2,7 +2,7 @@ use <./components/game-pad-component.scad>
 use <./components/battery.scad>
 use <./pieces/facade-top.scad>
 use <./pieces/facade-bottom.scad>
-use <./mother-board.scad>
+use <./components/mother-board-component.scad>
 
 include <./configurations/global.scad>
 
@@ -11,16 +11,21 @@ include <./configurations/global.scad>
 //     cylinder(h = 12, d = 3, $fn = 10);
 
 
-// translate(concat(facadeControllerCalculateXYOffset(), facade_front_z_size))
+// translate(concat(facadeControllerCalculateXYOffset(), case_external_panes_thickness))
 //    gamePadComponent();
-// facadeTop();
 
-translate([78, 10, -20])
+
+
+*translate([78, 10, -20])
     rotate([0,0,90])
-        motherBoard();
+        motherBoardComponent();
 
-translate([7.5, 115, -23])
+*translate([7.5, 115, -23])
     battery();
 
-translate([0, 0, -30])
+
+translate([0, 0, case_external_z_size - case_external_panes_thickness])
+    facadeTop();
+
+translate([0, 0, 0])
     facadeBottom();

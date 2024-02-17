@@ -1,9 +1,9 @@
-use <./pieces/subpieces/breadboard.scad>
-use <./libraries/electronics.scad>
+use <./../pieces/subpieces/breadboard.scad>
+use <./../libraries/electronics.scad>
 
 
 
-module motherBoard() {
+module motherBoardComponent() {
 
 
 
@@ -115,4 +115,4 @@ module motherBoard() {
 }
 
 
-motherBoard();
+motherBoardComponent();
