@@ -1,19 +1,26 @@
 // external size
 case_external_x_size = 90;
 case_external_y_size = 120;
-case_external_z_size = 20;
+case_external_z_size = 40;
 
-case_external_panes_thickness = 5;
-
+case_external_panes_thickness = 4.8;
 
 facade_front_round_edges_radius = 5;
+facade_throws_margin = 5;
 
-facade_front_fn = 80;
+facade_corners_offset_lenght = 12;
+
+facade_fn = 80;
+
 
 facade_controller_coords = [
     case_external_x_size / 2,
     case_external_y_size / 2 - 30,
 ];
+
+
+
+
 
 // Controller facade
 controller_breadboard_x_size_point = 28;
@@ -69,9 +76,6 @@ controller_bolt_throws_list = [
     [27, 2],
     [23, 8],
 ];
-
-
-
 
 
 // Positionning
