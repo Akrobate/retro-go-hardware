@@ -2,20 +2,20 @@ include <./../configurations/global.scad>
 
 
 module facadeCorner(
-    round_radius = 5,
+    round_radius = facade_front_round_edges_radius,
     z_size = case_external_z_size - (case_external_panes_thickness * 2),
-    main_x_size = 20,
-    main_y_size = 20,
-    main_thickness = 12,
+    main_x_size = facade_corners_main_x_size,
+    main_y_size = facade_corners_main_y_size,
+    main_thickness = facade_corners_main_thickness,
 
-    offset_thickness = 7,
+    offset_thickness = case_external_panes_thickness,
     offset_lenght = facade_corners_offset_lenght,
 
-    throw_diameter = 3,
-    throw_x_margin = 3,
-    throw_y_margin = 3,
+    throw_diameter = insert_throw_diameter,
+    throw_depth = insert_throw_length,
+    throw_x_margin = facade_throws_margin,
+    throw_y_margin = facade_throws_margin,
     throw_z_margin = facade_throws_margin,
-    throw_depth = 8,
     $fn = 80
 ) {
 

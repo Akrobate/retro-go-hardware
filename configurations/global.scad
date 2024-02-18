@@ -1,14 +1,17 @@
 // external size
 case_external_x_size = 90;
-case_external_y_size = 120;
+case_external_y_size = 140;
 case_external_z_size = 40;
-
 case_external_panes_thickness = 4.8;
 
 facade_front_round_edges_radius = 5;
 facade_throws_margin = 5;
 
-facade_corners_offset_lenght = 12;
+// facade corners
+facade_corners_offset_lenght = 9;
+facade_corners_main_x_size = 19;
+facade_corners_main_y_size = 19;
+facade_corners_main_thickness = 11;
 
 facade_fn = 80;
 
@@ -18,7 +21,9 @@ facade_controller_coords = [
     case_external_y_size / 2 - 30,
 ];
 
-
+// Generics
+insert_throw_diameter = 4.2;
+insert_throw_length = 6 + 2;
 
 
 
