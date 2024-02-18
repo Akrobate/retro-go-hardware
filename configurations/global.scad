@@ -13,7 +13,7 @@ facade_corners_main_x_size = 19;
 facade_corners_main_y_size = 19;
 facade_corners_main_thickness = 11;
 
-facade_fn = 80;
+facade_fn = 100;
 
 
 facade_controller_coords = [

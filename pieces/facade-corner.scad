@@ -11,12 +11,15 @@ module facadeCorner(
     offset_thickness = case_external_panes_thickness,
     offset_lenght = facade_corners_offset_lenght,
 
+    correction_offset_thickness = 0.0, //
+    correction_offset_length = 0.0, //
+
     throw_diameter = insert_throw_diameter,
     throw_depth = insert_throw_length,
     throw_x_margin = facade_throws_margin,
     throw_y_margin = facade_throws_margin,
     throw_z_margin = facade_throws_margin,
-    $fn = 80
+    $fn = facade_fn
 ) {
 
     difference() {
@@ -39,19 +42,21 @@ module facadeCorner(
                 ]);
         }
 
-        translate([offset_lenght, -main_thickness + offset_thickness, - z_size / 2])
-            cube([
-                main_x_size - round_radius,
-                main_thickness,
-                z_size * 2
-            ]);
+        translate([-correction_offset_length, correction_offset_thickness, 0])
+            translate([offset_lenght, -main_thickness + offset_thickness, - z_size / 2])
+                cube([
+                    main_x_size - round_radius,
+                    main_thickness,
+                    z_size * 2
+                ]);
 
-        translate([-main_thickness + offset_thickness, offset_lenght, - z_size / 2])
-            cube([
-                main_thickness,
-                main_y_size - round_radius,
-                z_size * 2
-            ]);
+        translate([correction_offset_thickness, -correction_offset_length, 0])
+            translate([-main_thickness + offset_thickness, offset_lenght, - z_size / 2])
+                cube([
+                    main_thickness,
+                    main_y_size - round_radius,
+                    z_size * 2
+                ]);
 
         // x throws
         translate([offset_lenght + throw_x_margin,  offset_thickness - 0.1, throw_y_margin])
