@@ -1,8 +1,8 @@
-use <./../pieces/facade-front.scad>
-use <./../pieces/facade-back.scad>
-use <./../pieces/facade-top.scad>
-use <./../pieces/facade-left.scad>
-use <./../pieces/facade-corner.scad>
+use <./../pieces/facade-front-piece.scad>
+use <./../pieces/facade-back-piece.scad>
+use <./../pieces/facade-top-piece.scad>
+use <./../pieces/facade-left-piece.scad>
+use <./../pieces/facade-corner-piece.scad>
 
 include <./../configurations/global.scad>
 
@@ -32,22 +32,22 @@ module housingComponent() {
 
     // Corners (bottom left)
     translate([0, 0, case_external_panes_thickness])
-        facadeCorner();
+        facadeCornerPiece();
 
     // Corners (bottom right)
     translate([case_external_x_size, 0, case_external_panes_thickness])
         rotate([0, 0, 90])
-            facadeCorner();
+            facadeCornerPiece();
 
     // Corners (top left)
     translate([0, case_external_y_size, case_external_panes_thickness])
         rotate([0, 0, -90])
-            facadeCorner();
+            facadeCornerPiece();
 
     // Corners (bottom right)
     translate([case_external_x_size, case_external_y_size, case_external_panes_thickness])
         rotate([0, 0, -180])
-            facadeCorner();
+            facadeCornerPiece();
 }
 
 

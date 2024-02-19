@@ -1,7 +1,7 @@
 include <./../configurations/global.scad>
 
 
-module facadeCorner(
+module facadeCornerPiece(
     round_radius = facade_front_round_edges_radius,
     z_size = case_external_z_size - (case_external_panes_thickness * 2),
     main_x_size = facade_corners_main_x_size,
@@ -89,6 +89,6 @@ module facadeCorner(
 }
 
 
-facadeCorner(
+facadeCornerPiece(
     $fn = 80
 );
