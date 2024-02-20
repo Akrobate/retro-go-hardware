@@ -90,13 +90,25 @@ module screenThrows() {
 }
 
 
+module screenFrame(
+    electronic_board_x_size = 72.25,
+    electronic_board_y_size = 43.25,
+) {
+    cube([electronic_board_x_size, electronic_board_y_size, 2]);
+}
+
+
+
 translate([0,0,-0.01])
     screen($fn = 100);
 
 difference() {
     translate([-15,-30, 1.25])
         color("SaddleBrown")
-            cube([100,100, 4.8]);
+            cube([100, 100, 4.8]);
 
     screenThrows();
 }
+
+translate([0, 0, 4.8 + 1.25])
+    screenFrame();
