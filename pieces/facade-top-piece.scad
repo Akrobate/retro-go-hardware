@@ -3,7 +3,7 @@ use <./../libraries/commons.scad>
 include <./../configurations/global.scad>
 
 
-module facadeTop(
+module facadeTopPiece(
     x_size = case_external_x_size - (facade_corners_offset_lenght * 2),
     y_size = case_external_z_size - (case_external_panes_thickness * 2),
     z_size = case_external_panes_thickness,
@@ -28,4 +28,4 @@ module facadeTop(
 }
 
 
-facadeTop();
+facadeTopPiece();

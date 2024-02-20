@@ -52,7 +52,7 @@ function facadeControllerCalculateXYOffset(
 
 
 
-module facadeFront(
+module facadeFrontPiece(
     x_size = case_external_x_size,
     y_size = case_external_y_size,
     z_size = case_external_panes_thickness,
@@ -99,6 +99,6 @@ module facadeFront(
     }
 }
 
-%facadeFront();
+%facadeFrontPiece();
 
 

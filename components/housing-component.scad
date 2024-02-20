@@ -9,26 +9,26 @@ include <./../configurations/global.scad>
 
 module housingComponent() {
     translate([0, 0, case_external_z_size - case_external_panes_thickness])
-        facadeFront();
+        facadeFrontPiece();
 
     translate([0, 0, 0])
-        facadeBack();
+        facadeBackPiece();
 
     translate([facade_corners_offset_lenght, case_external_panes_thickness - 0.01, case_external_panes_thickness])
         rotate([90,0,0])
-            facadeTop();
+            facadeTopPiece();
 
     translate([facade_corners_offset_lenght, case_external_y_size + 0.01, case_external_panes_thickness])
         rotate([90,0,0])
-            facadeTop();
+            facadeTopPiece();
 
     translate([0 - 0.01, facade_corners_offset_lenght, case_external_panes_thickness])
         rotate([90,0,90])
-            facadeLeft();
+            facadeLeftPiece();
 
     translate([case_external_x_size - case_external_panes_thickness + 0.01, facade_corners_offset_lenght, case_external_panes_thickness])
         rotate([90,0,90])
-            facadeLeft();
+            facadeLeftPiece();
 
     // Corners (bottom left)
     translate([0, 0, case_external_panes_thickness])

@@ -4,7 +4,7 @@ use <./../libraries/commons.scad>
 use <./subpieces/rounded-pane.scad>
 
 
-module facadeBack(
+module facadeBackPiece(
     x_size = case_external_x_size,
     y_size = case_external_y_size,
     z_size = case_external_panes_thickness,
@@ -38,5 +38,5 @@ module facadeBack(
     }
 }
 
-%facadeFront();
+%facadeFrontPiece();
 
