@@ -8,8 +8,11 @@ module facadeCornerPiece(
     main_y_size = facade_corners_main_y_size,
     main_thickness = facade_corners_main_thickness,
 
-    offset_thickness = case_external_panes_thickness,
-    offset_lenght = facade_corners_offset_lenght,
+    x_branch_offset_thickness = case_external_panes_thickness,
+    x_branch_offset_lenght = facade_corners_offset_lenght,
+
+    y_branch_offset_thickness = case_external_panes_thickness,
+    y_branch_offset_lenght = facade_corners_offset_lenght,
 
     correction_offset_thickness = 0.0, //
     correction_offset_length = 0.0, //
@@ -42,38 +45,44 @@ module facadeCornerPiece(
                 ]);
         }
 
+
+
+        // x branch throws
         translate([-correction_offset_length, correction_offset_thickness, 0])
-            translate([offset_lenght, -main_thickness + offset_thickness, - z_size / 2])
+            translate([x_branch_offset_lenght, -main_thickness + x_branch_offset_thickness, - z_size / 2])
                 cube([
                     main_x_size - round_radius,
                     main_thickness,
                     z_size * 2
                 ]);
 
+        // x branch throws
         translate([correction_offset_thickness, -correction_offset_length, 0])
-            translate([-main_thickness + offset_thickness, offset_lenght, - z_size / 2])
+            translate([-main_thickness + y_branch_offset_thickness, y_branch_offset_lenght, - z_size / 2])
                 cube([
                     main_thickness,
                     main_y_size - round_radius,
                     z_size * 2
                 ]);
 
-        // x throws
-        translate([offset_lenght + throw_x_margin,  offset_thickness - 0.1, throw_y_margin])
+
+
+        // x branch throws
+        translate([x_branch_offset_lenght + throw_x_margin,  x_branch_offset_thickness - 0.1, throw_y_margin])
             rotate([-90,0,0])
                 cylinder(h = throw_depth + 0.1, d = throw_diameter, $fn = $fn);
 
-        translate([offset_lenght + throw_x_margin, offset_thickness - 0.1, z_size - throw_y_margin])
+        translate([x_branch_offset_lenght + throw_x_margin, x_branch_offset_thickness - 0.1, z_size - throw_y_margin])
             rotate([-90,0,0])
                 cylinder(h = throw_depth + 0.1, d = throw_diameter, $fn = $fn);
 
 
-        // y throws
-        translate([offset_thickness - 0.1, offset_lenght + throw_y_margin, throw_y_margin])
+        // y branch throws
+        translate([y_branch_offset_thickness - 0.1, y_branch_offset_lenght + throw_x_margin, throw_y_margin])
             rotate([0, 90, 0])
                 cylinder(h = throw_depth + 0.1, d = throw_diameter, $fn = $fn);
 
-        translate([offset_thickness - 0.1, offset_lenght + throw_y_margin, z_size - throw_y_margin])
+        translate([y_branch_offset_thickness - 0.1, y_branch_offset_lenght + throw_x_margin, z_size - throw_y_margin])
             rotate([0, 90, 0])
                 cylinder(h = throw_depth + 0.1, d = throw_diameter, $fn = $fn);
 
