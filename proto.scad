@@ -26,6 +26,12 @@ include <./assets/lcd-screen/configurations.scad>
 
 */
 
+
+
+
+
+
+
 module screenFixationThrows(
     // screen configurations
     electronic_board_x_size = electronic_board_x_size,
@@ -148,7 +154,7 @@ module screenFrame(
     electronic_board_x_size = electronic_board_x_size,
     electronic_board_y_size = electronic_board_y_size,
 
-
+    $fn = 100
 ) {
 
     margin = 3;
@@ -158,7 +164,7 @@ module screenFrame(
     top_margin = margin;
     bottom_margin = margin;
 
-    screen_frame_z_size = 2;
+    screen_frame_z_size = 1.5;
 
     glass_embedding_margin = 1;
     glass_embedding_z_depth = 1;
@@ -189,9 +195,92 @@ module screenFrame(
                 z_size = glass_embedding_z_depth + 0.01
             );
 
-        // Glass embedding
+        screenFixationThrows($fn = $fn);
         
     }
+}
+
+
+
+module screenFrameFacade(
+    electronic_board_x_size = electronic_board_x_size,
+    electronic_board_y_size = electronic_board_y_size,
+
+    $fn = 100
+) {
+
+    margin = 3;
+
+    left_margin = margin;
+    right_margin = margin;
+    top_margin = margin;
+    bottom_margin = margin;
+
+    screen_frame_z_size = 1;
+
+    glass_embedding_margin = 1;
+    glass_embedding_z_depth = 1;
+
+    throws_z_size = 20;
+
+
+    bottom_part_z = 0.2;
+    top_part_z = 0.1;
+    top_part_throws_x_y_margin = 0;
+
+    difference() {
+
+
+        hull() {
+            translate([-left_margin, -bottom_margin, 0])
+                cube(
+                    [
+                        electronic_board_x_size + left_margin + right_margin,
+                        electronic_board_y_size + top_margin + bottom_margin,
+                        bottom_part_z
+                    ]
+                );
+
+            translate([
+                -top_part_throws_x_y_margin,
+                -top_part_throws_x_y_margin,
+                screen_frame_z_size - top_part_z
+            ])
+                cube(
+                    [
+                        electronic_board_x_size + top_part_throws_x_y_margin * 2,
+                        electronic_board_y_size + top_part_throws_x_y_margin * 2,
+                        top_part_z
+                    ]
+                );
+        }
+
+
+
+
+        translate([0,0, -throws_z_size / 2])
+            sceenVisibleZoneCube(
+                z_size = throws_z_size
+            );
+
+        screenFixationThrows($fn = $fn);
+        
+    }
+}
+
+
+
+
+
+
+module glass() {
+    
+    color("LightGray", 0.5)
+        sceenVisibleZoneCube(
+            x_margin = 0.7,
+            y_margin = 0.7,
+            z_size = 1
+        );
 }
 
 
@@ -210,4 +299,13 @@ difference() {
 }
 
 translate([0, 0, 4.8 + 1.25])
-    screenFrame();
+    color("DarkSlateGray")
+        screenFrame();
+
+translate([0,0, 4.8 + 1.25 + 0.5 + 0.01])
+    glass();
+
+
+translate([0, 0, 4.8 + 1.25 + 1.5])
+    color("DarkSlateGray")
+        screenFrameFacade();
