@@ -19,8 +19,8 @@ module facadeCornerPiece(
 
     throw_diameter = insert_throw_diameter,
     throw_depth = insert_throw_length,
-    throw_x_margin = facade_throws_margin,
-    throw_y_margin = facade_throws_margin,
+    throw_x_margin = facade_throws_margin,  // applies on both branches
+    throw_y_margin = facade_throws_margin,  // applies on both branches
     throw_z_margin = facade_throws_margin,
     $fn = facade_fn
 ) {

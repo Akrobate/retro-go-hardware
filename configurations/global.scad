@@ -21,10 +21,14 @@ facade_controller_coords = [
     case_external_y_size / 2 - 30,
 ];
 
+
+// Screen frames
+
+
+
 // Generics
 insert_throw_diameter = 4.2;
 insert_throw_length = 6 + 2;
-
 
 
 // Controller facade
@@ -43,6 +47,7 @@ controller_facade_with_border_y_size = 45;
 controller_facade_border_throws_margin = 5;
 controller_facade_border_fn = 80;
 
+
 // Cross Button
 controller_cross_button_x_y_size = 20;
 controller_cross_button_z_size = 4;
@@ -52,12 +57,14 @@ controller_cross_button_support_x_y_size = 22;
 controller_cross_button_support_z_size = 1;
 controller_cross_button_fn = 150;
 
+
 // A and B Buttons
 controller_a_b_button_diameter = 7;
 controller_a_b_button_z_size = 4;
 controller_a_b_button_support_diameter = 9;
 controller_a_b_button_support_z_size = 1;
 controller_a_b_button_fn = 80;
+
 
 // small Buttons
 controller_small_button_diameter = 5;
@@ -66,6 +73,7 @@ controller_small_button_support_diameter = 7;
 controller_small_button_support_z_size = 1;
 controller_small_button_fn = 80;
 
+// Directional cross
 controller_directional_cross_points_coords = [6, 5];
 controller_start_button_points_coords = [14, 3];
 controller_select_button_points_coords = [18, 3];
@@ -81,7 +89,3 @@ controller_bolt_throws_list = [
     [27, 2],
     [23, 8],
 ];
-
-
-// Positionning
-
