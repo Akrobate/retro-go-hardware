@@ -2,20 +2,20 @@ include <./configurations.scad>
 
 
 module screen(
-    electronic_board_x_size = electronic_board_x_size,
-    electronic_board_y_size = electronic_board_y_size,
-    electronic_board_z_size = electronic_board_z_size,
+    electronic_board_x_size = screen_asset_electronic_board_x_size,
+    electronic_board_y_size = screen_asset_electronic_board_y_size,
+    electronic_board_z_size = screen_asset_electronic_board_z_size,
     
-    screen_external_x_size = screen_external_x_size,
-    screen_external_y_size = screen_external_y_size,
-    screen_external_z_size = screen_external_z_size,
+    screen_external_x_size = screen_asset_screen_external_x_size,
+    screen_external_y_size = screen_asset_screen_external_y_size,
+    screen_external_z_size = screen_asset_screen_external_z_size,
     
-    throw_diameter = throw_diameter,
+    throw_diameter = screen_asset_throw_diameter,
     
-    x_margin_left = x_margin_left,
-    x_margin_right = x_margin_right,
-    y_margin_top = y_margin_top,
-    y_margin_bottom = y_margin_bottom,    
+    x_margin_left = screen_asset_x_margin_throws_left,
+    x_margin_right = screen_asset_x_margin_throws_right,
+    y_margin_top = screen_asset_y_margin_throws_top,
+    y_margin_bottom = screen_asset_y_margin_throws_bottom,    
     
     $fn = $fn
 ) {
