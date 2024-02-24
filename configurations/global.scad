@@ -23,6 +23,18 @@ facade_controller_coords = [
 
 
 // Screen frames
+screen_frame_electronic_board_margin = 3;
+screen_frame_throw_diameter = 3.5;
+screen_frame_piece_z_size = 1.5;
+screen_frame_piece_glass_embedding_margin = 1;
+screen_frame_piece_glass_embedding_z_depth = 1;
+screen_frame_facade_piece_z_size = 1;
+screen_frame_fn = 100;
+
+screen_glass_visible_zone_x_margin = 0.7;
+screen_glass_visible_zone_y_margin = 0.7;
+screen_glass_z_size = 1;
+
 
 
 

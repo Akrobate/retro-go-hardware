@@ -1,4 +1,5 @@
 include <../assets/lcd-screen/configurations.scad>
+include <../configurations/global.scad>
 
 use <../enveloppes/screen-enveloppe.scad>
 
@@ -7,10 +8,10 @@ module screenFrameFacadePiece(
     electronic_board_x_size = screen_asset_electronic_board_x_size,
     electronic_board_y_size = screen_asset_electronic_board_y_size,
 
-    screen_frame_electronic_board_margin = 3,
-    screen_frame_z_size = 1,
-    throw_diameter = 3.1,
-    $fn = 100
+    screen_frame_electronic_board_margin = screen_frame_electronic_board_margin,
+    screen_frame_z_size = screen_frame_facade_piece_z_size,
+    throw_diameter = screen_frame_throw_diameter,
+    $fn = screen_frame_fn
 ) {
 
     left_margin = screen_frame_electronic_board_margin;
@@ -60,3 +61,6 @@ module screenFrameFacadePiece(
         );        
     }
 }
+
+
+screenFrameFacadePiece();

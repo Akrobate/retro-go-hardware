@@ -91,7 +91,11 @@ module facadeFrontPiece(
 
         translate(
             concat(
-                facadeControllerCalculateXYOffset(facade_with_border_x_size, facade_with_border_y_size, facade_controller_coords),
+                facadeControllerCalculateXYOffset(
+                    facade_with_border_x_size,
+                    facade_with_border_y_size,
+                    facade_controller_coords
+                ),
                 -z_size / 2
             )
         )

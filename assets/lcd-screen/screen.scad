@@ -69,10 +69,12 @@ module screen(
         translate([x_margin_left, y_margin_bottom, - electronic_board_z_size / 2])
             cylinder(h = electronic_board_z_size * 2, d = throw_diameter, $fn = $fn);
 
-        translate([x_margin_left, electronic_board_y_size - y_margin_bottom, - electronic_board_z_size / 2])
+        //
+        translate([x_margin_left, electronic_board_y_size - y_margin_top, - electronic_board_z_size / 2])
             cylinder(h = electronic_board_z_size * 2, d = throw_diameter, $fn = $fn);
 
-        translate([electronic_board_x_size - x_margin_right, electronic_board_y_size - y_margin_bottom, - electronic_board_z_size / 2])
+        // 
+        translate([electronic_board_x_size - x_margin_right, electronic_board_y_size - y_margin_top, - electronic_board_z_size / 2])
             cylinder(h = electronic_board_z_size * 2, d = throw_diameter, $fn = $fn);
 
         translate([electronic_board_x_size - x_margin_right, y_margin_bottom, - electronic_board_z_size / 2])
