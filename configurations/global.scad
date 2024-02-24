@@ -7,6 +7,8 @@ case_external_panes_thickness = 4.8;
 facade_front_round_edges_radius = 5;
 facade_throws_margin = 5;
 
+facade_front_fixation_throws_diameter = 3.5;
+
 // facade corners
 facade_corners_offset_lenght = 9;
 facade_corners_main_x_size = 19;
