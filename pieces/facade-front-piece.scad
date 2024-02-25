@@ -1,10 +1,14 @@
 use <./subpieces/rounded-pane.scad>
 use <./subpieces/breadboard.scad>
 
+use <../enveloppes/screen-enveloppe.scad>
+
 use <./../libraries/commons.scad>
 use <./../libraries/electronics.scad>
 
 include <./../configurations/global.scad>
+include <../assets/lcd-screen/configurations.scad>
+
 
 module controllerFacadePieceThrows(
     facade_with_border_x_size = controller_facade_with_border_x_size,
@@ -53,6 +57,24 @@ function facadeControllerCalculateXYOffset(
 ];
 
 
+function facadeScreenCalculateXYOffset(
+    screen_asset_electronic_board_x_size = screen_asset_electronic_board_x_size,
+    screen_asset_electronic_board_y_size = screen_asset_electronic_board_y_size,
+    facade_screen_coords = facade_screen_coords,
+) = [
+    facade_screen_coords[0] - screen_asset_electronic_board_x_size / 2,
+    facade_screen_coords[1] - screen_asset_electronic_board_y_size / 2,
+];
+
+
+
+module facadeScreenThrows() {
+    screenFixationThrows($fn = 100);
+    screenMainThrow();
+    screenConnectorThrow();
+}
+
+
 
 module facadeFrontPiece(
     x_size = case_external_x_size,
@@ -68,8 +90,11 @@ module facadeFrontPiece(
     facade_with_border_x_size = controller_facade_with_border_x_size,
     facade_with_border_y_size = controller_facade_with_border_y_size,
 
-    facade_controller_coords = facade_controller_coords,
+    screen_asset_electronic_board_x_size = screen_asset_electronic_board_x_size,
+    screen_asset_electronic_board_y_size = screen_asset_electronic_board_y_size,
 
+    facade_controller_coords = facade_controller_coords,
+    facade_screen_coords = facade_screen_coords,
     $fn = facade_fn
 ) {
 
@@ -103,6 +128,20 @@ module facadeFrontPiece(
             )
         )
             controllerFacadePieceThrows();
+
+
+        translate(
+            concat(
+                facadeScreenCalculateXYOffset(
+                    screen_asset_electronic_board_x_size,
+                    screen_asset_electronic_board_y_size,
+                    facade_screen_coords
+                ),
+                -z_size / 2
+            )
+        )
+            facadeScreenThrows();
+
     }
 }
 

@@ -24,7 +24,14 @@ module directionalCrossElectronicCard(
         controller_b_button_points_coords,
     ]
 ) {
-    breadboard(breadboard_x_size_point, breadboard_y_size_point, throw_3mm_coord_list = bolt_throws_list, z_size = 1.5, $fn = 30);
+    breadboard(
+        breadboard_x_size_point,
+        breadboard_y_size_point,
+        throw_3mm_coord_list = bolt_throws_list,
+        draw_throws = false,
+        z_size = 1.5,
+        $fn = 30
+    );
 
     placeCrossElectronicButton(directional_cross_points_coords, 1.5, $fn = 20);
 

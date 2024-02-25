@@ -37,7 +37,10 @@ screen_glass_visible_zone_x_margin = 0.7;
 screen_glass_visible_zone_y_margin = 0.7;
 screen_glass_z_size = 1;
 
-
+facade_screen_coords = [
+    case_external_x_size / 2,
+    case_external_y_size / 2 + 30,
+];
 
 
 // Generics
