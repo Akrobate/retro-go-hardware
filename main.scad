@@ -8,13 +8,11 @@ use <./pieces/facade-front-piece.scad>
 
 include <./configurations/global.scad>
 
-// color("green")
-//     cylinder(h = 12, d = 3, $fn = 10);
-
-
+// Controller GamePad
 translate(concat(facadeControllerCalculateXYOffset(), case_external_z_size))
     gamePadComponent();
 
+// Screen component
 translate(concat(facadeScreenCalculateXYOffset(), case_external_z_size - 4.8 - 1.25))
     screenComponent();
 

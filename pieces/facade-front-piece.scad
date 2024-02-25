@@ -69,7 +69,10 @@ function facadeScreenCalculateXYOffset(
 
 
 module facadeScreenThrows() {
-    screenFixationThrows($fn = 100);
+    screenFixationThrows(
+        throw_diameter = facade_front_fixation_throws_diameter,
+        $fn = 100
+    );
     screenMainThrow();
     screenConnectorThrow();
 }
