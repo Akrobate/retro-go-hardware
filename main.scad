@@ -16,13 +16,13 @@ translate(concat(facadeControllerCalculateXYOffset(), case_external_z_size))
 translate(concat(facadeScreenCalculateXYOffset(), case_external_z_size - 4.8 - 1.25))
     screenComponent();
 
-// Mother board
-*translate([78, 10, -20])
+// Mother board // x 10
+translate([78, 45, case_external_panes_thickness + 3])
     rotate([0,0,90])
         motherBoardComponent();
 
-// Battery
-*translate([7.5, 115, -23])
+// Battery // x 98
+translate([7.5, 20, case_external_panes_thickness])
     battery();
 
-#housingComponent();
+housingComponent();

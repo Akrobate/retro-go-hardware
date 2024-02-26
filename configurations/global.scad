@@ -1,7 +1,7 @@
 // external size
 case_external_x_size = 90;
 case_external_y_size = 140;
-case_external_z_size = 40;
+case_external_z_size = 38;
 case_external_panes_thickness = 4.8;
 
 facade_front_round_edges_radius = 5;
@@ -20,7 +20,7 @@ facade_fn = 100;
 
 facade_controller_coords = [
     case_external_x_size / 2,
-    case_external_y_size / 2 - 30,
+    case_external_y_size / 2 - 28,
 ];
 
 
@@ -39,7 +39,7 @@ screen_glass_z_size = 1;
 
 facade_screen_coords = [
     case_external_x_size / 2,
-    case_external_y_size / 2 + 30,
+    case_external_y_size / 2 + 25,
 ];
 
 
