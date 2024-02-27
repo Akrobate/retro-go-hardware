@@ -1,3 +1,3 @@
-use <./components/screen-component.scad>
+use <./assets/usb-charger/usb-charger.scad>
 
-screenComponent();
+usbCharger();
