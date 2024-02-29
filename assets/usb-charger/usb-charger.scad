@@ -1,4 +1,4 @@
-include <./configuration.scad>
+include <./configurations.scad>
 
 module usbCharger(
     electronic_card_x_size = usb_charger_asset_electronic_card_x_size,
