@@ -17,7 +17,7 @@ module usbChargerComponent(
     
     usb_charger_asset_usb_port_z_size = 3.29;
 
-
+    usb_charger_asset_electronic_card_z_size = 0.87;
 
     support_total_x_size = 17.57 + 15;  // 17.57
     support_total_y_size = 12;  // 27.85
@@ -36,7 +36,7 @@ module usbChargerComponent(
 
     fixation_facade_y_margin = 0.5;
 
-    throw_offset_y = 4;
+    throw_offset_y = 4.5;
     throw_offset_x = 3.5;
 
     fadace_fn = 100;
@@ -48,7 +48,7 @@ module usbChargerComponent(
         abs(usb_charger_asset_usb_port_y_offset),
         support_total_z_size - encaps_z_size
     ])
-        #usbCharger();
+        usbCharger();
 
 
     // circuit support
@@ -92,17 +92,17 @@ module usbChargerComponent(
         abs(usb_charger_asset_usb_port_y_offset) + fixation_facade_y_margin,
         support_total_z_size
     ])
-        #color("Yellow")
+        color("Yellow")
         usbChargerFixationPiece(
             support_total_x_size = support_total_x_size,
             support_total_y_size = support_total_y_size - abs(usb_charger_asset_usb_port_y_offset) - fixation_facade_y_margin,
             support_total_z_size = fixation_support_z_size,
 
             encaps_x_size = encaps_x_size,
-            encaps_1_y_size = 5,
-            encaps_1_z_size = usb_charger_asset_usb_port_z_size, // Not perfect
-            encaps_2_y_size = 5,
-            encaps_2_z_size = usb_charger_asset_usb_port_z_size - 1,
+            encaps_1_y_size = 5.8,
+            encaps_1_z_size = usb_charger_asset_usb_port_z_size - (encaps_z_size - usb_charger_asset_electronic_card_z_size), // Not perfect
+            encaps_2_y_size = 10,
+            encaps_2_z_size = usb_charger_asset_usb_port_z_size - (encaps_z_size - usb_charger_asset_electronic_card_z_size) - 1.3,
 
             throw_offset_y = throw_offset_y - fixation_facade_y_margin,
             throw_offset_x = throw_offset_x,
@@ -170,25 +170,25 @@ module usbChargerFixationPiece(
         // Encaps on usb
         translate([
             (support_total_x_size - encaps_x_size) / 2,
-            0,
-            0
+            -0.01,
+            -0.01
         ])
-            %cube([
+            cube([
                 encaps_x_size,
-                encaps_1_y_size,
-                encaps_1_z_size,
+                encaps_1_y_size + 0.01,
+                encaps_1_z_size + 0.01,
             ]);
 
         // encaps rest
         translate([
             (support_total_x_size - encaps_x_size) / 2,
-            encaps_1_y_size,
-            0
+            encaps_1_y_size - 0.01,
+            -0.01
         ])
-            %cube([
+            cube([
                 encaps_x_size,
-                encaps_2_y_size,
-                encaps_2_z_size,
+                encaps_2_y_size + 0.01,
+                encaps_2_z_size + 0.01,
             ]);
 
         // Throws
@@ -197,14 +197,14 @@ module usbChargerFixationPiece(
             throw_offset_y,
             0
         ])
-            %cylinder(h = support_total_z_size * 4, d = throw_diam, center = true, $fn = fadace_fn);
+            cylinder(h = support_total_z_size * 4, d = throw_diam, center = true, $fn = fadace_fn);
             
         translate([
             support_total_x_size - throw_offset_x,
             throw_offset_y,
             0
         ])
-            %cylinder(h = support_total_z_size * 4, d = throw_diam, center = true, $fn = fadace_fn);
+            cylinder(h = support_total_z_size * 4, d = throw_diam, center = true, $fn = fadace_fn);
     }
 }
 
