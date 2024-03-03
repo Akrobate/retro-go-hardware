@@ -7,6 +7,7 @@ module usbCharger(
     usb_port_x_size = usb_charger_asset_usb_port_x_size,
     usb_port_y_size = usb_charger_asset_usb_port_y_size,
     usb_port_z_size = usb_charger_asset_usb_port_z_size,
+    usb_round_radius = usb_charger_asset_usb_round_radius,
     draw_rounded_usb = usb_charger_asset_draw_rounded_usb,
     usb_port_x_offset = usb_charger_asset_usb_port_x_offset,
     usb_port_y_offset = usb_charger_asset_usb_port_y_offset,
@@ -21,24 +22,22 @@ module usbCharger(
 
     if (draw_rounded_usb) {
 
-        round_radius = 1;
-
         usb_edges_coords = [
             [
-                round_radius,
-                round_radius
+                usb_round_radius,
+                usb_round_radius
             ],
             [
-                usb_port_x_size - round_radius,
-                round_radius
+                usb_port_x_size - usb_round_radius,
+                usb_round_radius
             ],
             [
-                usb_port_x_size - round_radius,
-                usb_port_z_size - round_radius
+                usb_port_x_size - usb_round_radius,
+                usb_port_z_size - usb_round_radius
             ],
             [
-                round_radius,
-                usb_port_z_size - round_radius
+                usb_round_radius,
+                usb_port_z_size - usb_round_radius
             ],
         ];
 
@@ -52,7 +51,7 @@ module usbCharger(
                     for (edge = usb_edges_coords) {
                         translate([edge[0], 0, edge[1]])
                             rotate([-90,0,0])
-                                cylinder(h = usb_port_y_size, r = round_radius, $fn = _fn);
+                                cylinder(h = usb_port_y_size, r = usb_round_radius, $fn = _fn);
                     }
                 }
     } else {
