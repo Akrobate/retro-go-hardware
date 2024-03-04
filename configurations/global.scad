@@ -106,3 +106,22 @@ controller_bolt_throws_list = [
     [27, 2],
     [23, 8],
 ];
+
+
+// usb charget holder
+usb_charger_support_total_x_size = 17.57 + 15;
+usb_charger_support_total_y_size = 12;
+usb_charger_support_total_z_size = 2;
+
+
+usb_charger_fixation_support_z_size = 5;
+usb_charger_encaps_x_size = 17.57 + 1;
+usb_charger_encaps_y_size = 27.85 + 1;
+usb_charger_encaps_z_size = 1;
+usb_charger_facade_z_size = 15;
+usb_charger_facade_x_fixation_spacing = 45;
+usb_charger_throw_diameter = 3;
+usb_charger_fixation_facade_y_margin = 0.5;
+usb_charger_throw_offset_y = 4.5;
+usb_charger_throw_offset_x = 3.5;
+usb_charger_fadace_fn = 100;
