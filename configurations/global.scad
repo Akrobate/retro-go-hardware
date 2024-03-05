@@ -114,13 +114,14 @@ usb_charger_support_total_y_size = 12;
 usb_charger_support_total_z_size = 2;
 
 
-usb_charger_fixation_support_z_size = 5;
+usb_charger_fixation_support_z_size = 4.5;
 usb_charger_encaps_x_size = 17.57 + 1;
 usb_charger_encaps_y_size = 27.85 + 1;
 usb_charger_encaps_z_size = 1;
-usb_charger_facade_z_size = 15;
-usb_charger_facade_x_fixation_spacing = 45;
-usb_charger_throw_diameter = 3;
+usb_charger_facade_z_size = 12;
+usb_charger_facade_x_fixation_spacing = 42;
+usb_charger_throw_diameter = 3.5;
+usb_charger_facade_holder_z_offset = 2.5; //
 usb_charger_fixation_facade_y_margin = 0.5;
 usb_charger_throw_offset_y = 4.5;
 usb_charger_throw_offset_x = 3.5;

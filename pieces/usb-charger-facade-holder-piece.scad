@@ -1,6 +1,7 @@
 include <../configurations/global.scad>
 include <../assets/usb-charger/configurations.scad>
 use <../enveloppes/usb-c-connector-enveloppe.scad>
+use <../enveloppes/bolt.scad>
 
 module usbChargerFacadeHolderPiece(
     support_total_x_size = usb_charger_support_total_x_size,
@@ -13,6 +14,8 @@ module usbChargerFacadeHolderPiece(
     facade_z_size = usb_charger_facade_z_size,
     facade_x_fixation_spacing = usb_charger_facade_x_fixation_spacing,
     throw_diameter = usb_charger_throw_diameter,
+
+    facade_holder_z_offset = usb_charger_facade_holder_z_offset,
 
     throw_offset_y = usb_charger_throw_offset_y,
     throw_offset_x = usb_charger_throw_offset_x,
@@ -49,22 +52,30 @@ module usbChargerFacadeHolderPiece(
                     throw_offset_x,
                     abs(usb_charger_asset_usb_port_y_offset) + throw_offset_y,
                     0
-                ])
-                    cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+                ]) {
+                    // cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+                    translate([0, 0, 2])
+                        rotate([-180,0,0])
+                            bolt($fn = 100);
+                }
                     
                 translate([
                     support_total_x_size - throw_offset_x,
                     abs(usb_charger_asset_usb_port_y_offset) + throw_offset_y,
                     0
-                ])
-                    cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+                ]) {
+                    // cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+                    translate([0, 0, 2])
+                        rotate([-180,0,0])
+                            bolt($fn = 100);
+                }
             }
 
             // facade
             translate([
                 -(facade_x_fixation_spacing - support_total_x_size) / 2,
                 0,
-                facade_z_size / 2 - 4,
+                facade_z_size / 2 - facade_holder_z_offset,
             ])
                 rotate([-90, 0, 0])
 

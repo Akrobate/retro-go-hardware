@@ -34,4 +34,7 @@ module usbChargerComponent(
         usbChargerFixationPiece();
 }
 
+
+
+
 usbChargerComponent();

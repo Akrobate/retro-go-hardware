@@ -4,7 +4,6 @@ include <../assets/usb-charger/configurations.scad>
 module usbChargerFixationPiece(
     support_total_x_size = usb_charger_support_total_x_size,
     support_total_y_size = usb_charger_support_total_y_size - abs(usb_charger_asset_usb_port_y_offset) - usb_charger_fixation_facade_y_margin,
-
     support_total_z_size = usb_charger_fixation_support_z_size,
     encaps_x_size = usb_charger_encaps_x_size,
     encaps_1_y_size = 5.8,
@@ -47,21 +46,35 @@ module usbChargerFixationPiece(
                 encaps_2_z_size + 0.01,
             ]);
 
+
+        nut_encaps_diameter = 6;
+        nut_encaps_depth = 2.8;
         // Throws
         translate([
             throw_offset_x,
             throw_offset_y,
             0
-        ])
+        ]) {
             cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+            translate([0,0,support_total_z_size - nut_encaps_depth])
+                rotate([0,0,90])
+                cylinder(h = 5, r = nut_encaps_diameter / 2 / cos(30) , $fn = 6);
+        }
+        
             
         translate([
             support_total_x_size - throw_offset_x,
             throw_offset_y,
             0
-        ])
+        ]) {
             cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+            translate([0,0,support_total_z_size - nut_encaps_depth])
+                rotate([0,0,90])
+                cylinder(h = 5, r = nut_encaps_diameter / 2 / cos(30) , $fn = 6);
+        }
+
     }
+
 }
 
 usbChargerFixationPiece();
