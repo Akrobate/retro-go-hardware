@@ -5,6 +5,9 @@ use <../assets/usb-charger/usb-charger.scad>
 use <../pieces/usb-charger-fixation-piece.scad>
 use <../pieces/usb-charger-facade-holder-piece.scad>
 
+use <../enveloppes/usb-charger-throws-enveloppe.scad>
+
+
 module usbChargerComponent(
     support_total_x_size = usb_charger_support_total_x_size,
     support_total_z_size = usb_charger_support_total_z_size,
@@ -32,9 +35,8 @@ module usbChargerComponent(
     ])
         color("Yellow")
         usbChargerFixationPiece();
+
 }
 
-
-
-
 usbChargerComponent();
+%usbChargerThrowsEnveloppe();

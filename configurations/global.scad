@@ -20,7 +20,7 @@ facade_fn = 100;
 
 facade_controller_coords = [
     case_external_x_size / 2,
-    case_external_y_size / 2 - 28,
+    case_external_y_size / 2 - 30,
 ];
 
 
@@ -39,7 +39,7 @@ screen_glass_z_size = 1;
 
 facade_screen_coords = [
     case_external_x_size / 2,
-    case_external_y_size / 2 + 25,
+    case_external_y_size / 2 + 28,
 ];
 
 
@@ -118,11 +118,21 @@ usb_charger_fixation_support_z_size = 4.5;
 usb_charger_encaps_x_size = 17.57 + 1;
 usb_charger_encaps_y_size = 27.85 + 1;
 usb_charger_encaps_z_size = 1;
-usb_charger_facade_z_size = 12;
+
 usb_charger_facade_x_fixation_spacing = 42;
+usb_charger_facade_y_size = 1.36;
+usb_charger_facade_z_size = 12;
+
 usb_charger_throw_diameter = 3.5;
 usb_charger_facade_holder_z_offset = 2.5; //
 usb_charger_fixation_facade_y_margin = 0.5;
 usb_charger_throw_offset_y = 4.5;
 usb_charger_throw_offset_x = 3.5;
 usb_charger_fadace_fn = 100;
+
+usb_charger_external_facade_main_throw_margin = 1.3;
+usb_charger_external_facade_main_throw_diameter = 3.5;
+
+usb_charger_coords = [
+    28, 15
+];

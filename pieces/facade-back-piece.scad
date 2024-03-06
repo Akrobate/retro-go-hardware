@@ -2,6 +2,7 @@ include <./../configurations/global.scad>
 use <./../libraries/commons.scad>
 
 use <./subpieces/rounded-pane.scad>
+use <../enveloppes/usb-charger-throws-enveloppe.scad>
 
 
 module facadeBackPiece(
@@ -13,6 +14,8 @@ module facadeBackPiece(
 
     round_edges_radius = facade_front_round_edges_radius,
 
+    usb_charger_facade_y_size = usb_charger_facade_y_size,
+    usb_charger_coords = usb_charger_coords,
     $fn = facade_fn
 ) {
 
@@ -35,7 +38,11 @@ module facadeBackPiece(
             ])
                 cylinder(h = z_size * 2, d = 3, $fn = $fn);
 
+        translate([usb_charger_coords[0], usb_charger_coords[1], -usb_charger_facade_y_size])
+            rotate([90,0,0])
+                usbChargerThrowsEnveloppe();
     }
+
 }
 
 %facadeFrontPiece();

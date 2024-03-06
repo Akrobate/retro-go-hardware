@@ -28,6 +28,11 @@ translate([7.5, 20, case_external_panes_thickness])
 
 housingComponent();
 
-translate([28, 8, case_external_z_size + 1.36])
-    rotate([-90,0,0])
+
+// translate([28, 8, case_external_z_size + 1.36])
+//     rotate([-90,0,0])
+//         usbChargerComponent();
+
+translate([usb_charger_coords[0], usb_charger_coords[1], -usb_charger_facade_y_size])
+    rotate([90,0,0])
         usbChargerComponent();
