@@ -25,3 +25,9 @@ done
 
 # Assets preview renders
 openscad -o png_files/previews/screen-component.png components/screen-component.scad
+openscad -o png_files/previews/game-pad-component.png components/game-pad-component.scad
+# mother board
+# usb charger holder
+
+#main preview
+openscad -o png_files/previews/main.png main.scad
