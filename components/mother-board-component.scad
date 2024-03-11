@@ -3,7 +3,9 @@ use <./../libraries/electronics.scad>
 
 
 
-module motherBoardComponent() {
+module motherBoardComponent(
+    draw_throws = false
+) {
 
 
 
@@ -11,7 +13,7 @@ module motherBoardComponent() {
         x_points = 7;
         y_points = 7;
 
-        color("Green")
+        color("FireBrick")
             hull() {
                 breadboard(
                     x_points = x_points,
@@ -23,14 +25,13 @@ module motherBoardComponent() {
             }
 
     }
-
 
 
     module sdCardModule(z_size = 16) {
         x_points = 6;
         y_points = 11;
 
-        color("Green")
+        color("RoyalBlue")
             hull() {
                 breadboard(
                     x_points = x_points,
@@ -42,23 +43,21 @@ module motherBoardComponent() {
             }
     }
 
-
-
     module esp32s3(z_size = 16) {
 
         y_points = 22;
         x_points = 11;
 
-        color("Green")
-                hull() {
-                    breadboard(
-                        x_points = x_points,
-                        y_points = y_points,
-                        z_size = z_size,
-                        draw_throws = false,
-                        $fn = 16
-                    );
-                }
+        color("DarkSlateGray")
+            hull() {
+                breadboard(
+                    x_points = x_points,
+                    y_points = y_points,
+                    z_size = z_size,
+                    draw_throws = false,
+                    $fn = 16
+                );
+            }
     }
 
 
@@ -67,7 +66,7 @@ module motherBoardComponent() {
         x_points = 6;
         y_points = 15;
 
-        color("Green")
+        color("RoyalBlue")
             hull() {
                 breadboard(
                     x_points = x_points,
@@ -83,7 +82,7 @@ module motherBoardComponent() {
     breadboard(
         x_points = 32,
         y_points = 25,
-        draw_throws = false,
+        draw_throws = draw_throws,
         $fn = 16
     );
 
@@ -103,4 +102,6 @@ module motherBoardComponent() {
 }
 
 
-motherBoardComponent();
+motherBoardComponent(
+    draw_throws = true
+);
