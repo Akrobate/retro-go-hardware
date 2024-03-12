@@ -39,4 +39,5 @@ module usbChargerComponent(
 }
 
 usbChargerComponent();
-%usbChargerThrowsEnveloppe();
+
+// %usbChargerThrowsEnveloppe();

@@ -10,3 +10,5 @@
 ![Screen preview](png_files/previews/screen-component.png)
 ![Mother board component](png_files/previews/mother-board-component.png)
 ![USB Charger](png_files/previews/usb-charger-component.png)
+![Housing](png_files/previews/housing-component.png)
+

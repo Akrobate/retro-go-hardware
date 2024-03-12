@@ -28,6 +28,7 @@ openscad -o png_files/previews/screen-component.png components/screen-component.
 openscad -o png_files/previews/game-pad-component.png components/game-pad-component.scad
 openscad -o png_files/previews/mother-board-component.png components/mother-board-component.scad
 openscad -o png_files/previews/usb-charger-component.png components/usb-charger-component.scad
+openscad -o png_files/previews/housing-component.png components/housing-component.scad
 
 #main preview
 openscad -o png_files/previews/main.png main.scad
