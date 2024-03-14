@@ -1,7 +1,5 @@
 include <../configurations/global.scad>
 
-
-
 module usbChargerThrowsEnveloppe(
     case_external_panes_thickness = case_external_panes_thickness,
     support_total_x_size = usb_charger_support_total_x_size,

@@ -96,7 +96,7 @@ module motherBoardComponent(
         translateBreadboard(2, 14)
             dacModule();
 
-        translateBreadboard(26, 4)
+        translateBreadboard(26, 9)
             dc2dc();     
     }
 }

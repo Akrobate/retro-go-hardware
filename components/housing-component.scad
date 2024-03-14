@@ -18,7 +18,7 @@ module housingComponent() {
         rotate([90,0,0])
             facadeTopPiece();
 
-    *translate([facade_corners_offset_lenght, case_external_y_size + 0.01, case_external_panes_thickness])
+    #translate([facade_corners_offset_lenght, case_external_y_size + 0.01, case_external_panes_thickness])
         rotate([90,0,0])
             facadeTopPiece();
 

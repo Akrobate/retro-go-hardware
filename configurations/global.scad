@@ -136,3 +136,11 @@ usb_charger_external_facade_main_throw_diameter = 3.5;
 usb_charger_coords = [
     28, 15
 ];
+
+
+facade_top_on_off_button_throw_diameter = 10;
+
+facade_top_on_off_button_coords = [
+    case_external_x_size / 2 + 18,
+    case_external_z_size / 2
+];

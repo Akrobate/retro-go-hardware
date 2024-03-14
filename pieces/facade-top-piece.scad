@@ -1,6 +1,8 @@
 use <./../libraries/commons.scad>
+use <./../enveloppes/on-off-button-throw-enveloppe.scad>
 
 include <./../configurations/global.scad>
+
 
 
 module facadeTopPiece(
@@ -8,6 +10,9 @@ module facadeTopPiece(
     y_size = case_external_z_size - (case_external_panes_thickness * 2),
     z_size = case_external_panes_thickness,
     throws_margin = facade_throws_margin,
+    facade_top_on_off_button_coords = facade_top_on_off_button_coords,
+    facade_corners_offset_lenght = facade_corners_offset_lenght,
+    case_external_panes_thickness = case_external_panes_thickness,
     $fn = facade_fn
 ) {
     
@@ -23,6 +28,14 @@ module facadeTopPiece(
                 [x_size - throws_margin, y_size - throws_margin,],
             ])
                 cylinder(h = z_size * 2, d = 3, $fn = $fn);
+
+        
+        translate([
+                facade_top_on_off_button_coords[0] - facade_corners_offset_lenght,
+                facade_top_on_off_button_coords[1] - case_external_panes_thickness,
+                -z_size / 2
+            ])
+                onOffButtonThrowEnveloppe();
     }
 
 }

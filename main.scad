@@ -5,7 +5,10 @@ use <./components/screen-component.scad>
 use <./components/mother-board-component.scad>
 use <./components/usb-charger-component.scad>
 
+use <./assets/on-off-button/on-off-button.scad>
+
 use <./pieces/facade-front-piece.scad>
+use <./pieces/facade-top-piece.scad>
 
 include <./configurations/global.scad>
 
@@ -27,6 +30,14 @@ translate([7.5, 20, case_external_panes_thickness])
     battery();
 
 housingComponent();
+
+*translate([
+    facade_top_on_off_button_coords[0],
+    case_external_y_size,
+    facade_top_on_off_button_coords[1]
+])
+    rotate([-90,0,0])
+        onOffButton();
 
 
 // translate([28, 8, case_external_z_size + 1.36])
