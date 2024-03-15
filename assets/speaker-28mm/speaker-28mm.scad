@@ -7,7 +7,6 @@ module speaker28mm(
     speaker_asset_magnet_z_size = speaker_asset_magnet_z_size,
     speaker_asset_fn = speaker_asset_fn
 ) {
-
     color("DimGray")
         union() {
             translate([0, 0, -speaker_asset_main_z_size + speaker_asset_magnet_z_size])

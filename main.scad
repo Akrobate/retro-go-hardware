@@ -7,26 +7,28 @@ use <./components/usb-charger-component.scad>
 
 use <./assets/on-off-button/on-off-button.scad>
 
+use <./assets/speaker-28mm/speaker-28mm.scad>
+
 use <./pieces/facade-front-piece.scad>
 use <./pieces/facade-top-piece.scad>
 
 include <./configurations/global.scad>
 
 // Controller GamePad
-translate(concat(facadeControllerCalculateXYOffset(), case_external_z_size))
+*translate(concat(facadeControllerCalculateXYOffset(), case_external_z_size))
     gamePadComponent();
 
 // Screen component
-translate(concat(facadeScreenCalculateXYOffset(), case_external_z_size - case_external_panes_thickness - 1.25))
+*translate(concat(facadeScreenCalculateXYOffset(), case_external_z_size - case_external_panes_thickness - 1.25))
     screenComponent();
 
 // Mother board // x 10
-translate([78, 45, case_external_panes_thickness + 3])
+*translate([78, 45, case_external_panes_thickness + 3])
     rotate([0,0,90])
         motherBoardComponent();
 
 // Battery // x 98
-translate([7.5, 20, case_external_panes_thickness])
+*translate([7.5, 20, case_external_panes_thickness])
     battery();
 
 housingComponent();
@@ -47,3 +49,8 @@ housingComponent();
 translate([usb_charger_coords[0], usb_charger_coords[1], -usb_charger_facade_y_size])
     rotate([90,0,0])
         usbChargerComponent();
+
+
+
+
+speaker28mm();
