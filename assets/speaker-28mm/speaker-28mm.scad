@@ -1,4 +1,4 @@
-include <configuration.scad>
+include <configurations.scad>
 
 module speaker28mm(
     speaker_asset_main_diameter = speaker_asset_main_diameter,

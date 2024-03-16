@@ -33,7 +33,7 @@ module facadeTopPiece(
         translate([
                 facade_top_on_off_button_coords[0] - facade_corners_offset_lenght,
                 facade_top_on_off_button_coords[1] - case_external_panes_thickness,
-                -z_size / 2
+                z_size / 2
             ])
                 onOffButtonThrowEnveloppe();
     }

@@ -23,7 +23,7 @@ include <./configurations/global.scad>
     screenComponent();
 
 // Mother board // x 10
-*translate([78, 45, case_external_panes_thickness + 3])
+translate([78, 45, case_external_panes_thickness + 3])
     rotate([0,0,90])
         motherBoardComponent();
 
@@ -33,7 +33,7 @@ include <./configurations/global.scad>
 
 housingComponent();
 
-*translate([
+translate([
     facade_top_on_off_button_coords[0],
     case_external_y_size,
     facade_top_on_off_button_coords[1]
