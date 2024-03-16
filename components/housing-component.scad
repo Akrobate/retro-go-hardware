@@ -31,24 +31,28 @@ module housingComponent() {
         rotate([90,0,90])
             facadeLeftPiece();
 
-    // Corners (bottom left)
-    translate([0, 0, case_external_panes_thickness])
-        facadeCornerPiece();
-
-    // Corners (bottom right)
-    *translate([case_external_x_size, 0, case_external_panes_thickness])
-        rotate([0, 0, 90])
+    module corners() {
+        // Corners (bottom left)
+        translate([0, 0, case_external_panes_thickness])
             facadeCornerPiece();
 
-    // Corners (top left)
-    translate([0, case_external_y_size, case_external_panes_thickness])
-        rotate([0, 0, -90])
-            facadeCornerPiece();
+        // Corners (bottom right)
+        translate([case_external_x_size, 0, case_external_panes_thickness])
+            rotate([0, 0, 90])
+                facadeCornerPiece();
 
-    // Corners (bottom right)
-    translate([case_external_x_size, case_external_y_size, case_external_panes_thickness])
-        rotate([0, 0, -180])
-            facadeCornerPiece();
+        // Corners (top left)
+        translate([0, case_external_y_size, case_external_panes_thickness])
+            rotate([0, 0, -90])
+                facadeCornerPiece();
+
+        // Corners (bottom right)
+        translate([case_external_x_size, case_external_y_size, case_external_panes_thickness])
+            rotate([0, 0, -180])
+                facadeCornerPiece();
+    }
+
+    *corners();
 }
 
 

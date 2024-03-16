@@ -16,6 +16,10 @@ module facadeBackPiece(
 
     usb_charger_facade_y_size = usb_charger_facade_y_size,
     usb_charger_coords = usb_charger_coords,
+
+    mother_board_coords = mother_board_coords,
+    mother_board_bolt_throws_list = mother_board_bolt_throws_list,
+
     $fn = facade_fn
 ) {
 
@@ -37,6 +41,18 @@ module facadeBackPiece(
                 [x_size - throws_margin, y_size - throws_margin,],
             ])
                 cylinder(h = z_size * 2, d = 3, $fn = $fn);
+
+
+        translate([mother_board_coords[0], mother_board_coords[1], -z_size / 2])
+            forEachCoord([
+                [throws_margin, throws_margin],
+                [x_size - throws_margin, throws_margin],
+                [throws_margin, y_size - throws_margin],
+                [x_size - throws_margin, y_size - throws_margin,],
+            ])
+                cylinder(h = z_size * 2, d = 3, $fn = $fn);
+
+
 
         translate([usb_charger_coords[0], usb_charger_coords[1], -usb_charger_facade_y_size])
             rotate([90,0,0])

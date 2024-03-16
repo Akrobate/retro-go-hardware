@@ -63,3 +63,21 @@ module breadboardThrow(x_index, y_index, z_size, throw_diameter, $fn = $fn) {
         );
 }
 
+
+module genericModule(
+    z_size = 0,
+    x_points = 0,
+    y_points = 0,
+    color = "FireBrick"
+) {
+    color(color)
+        hull() {
+            breadboard(
+                x_points = x_points,
+                y_points = y_points,
+                z_size = z_size,
+                draw_throws = false,
+                $fn = 16
+            );
+        }
+}

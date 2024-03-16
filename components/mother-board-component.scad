@@ -1,105 +1,58 @@
+include <../configurations/global.scad>
+
 use <./../pieces/subpieces/breadboard.scad>
 use <./../libraries/electronics.scad>
 
 
-
 module motherBoardComponent(
+    mother_board_bolt_throws_list = mother_board_bolt_throws_list,
     draw_throws = false
 ) {
 
-
-
     module dacModule(z_size = 16) {
-        x_points = 7;
-        y_points = 7;
-
-        color("FireBrick")
-            hull() {
-                breadboard(
-                    x_points = x_points,
-                    y_points = y_points,
-                    z_size = z_size,
-                    draw_throws = false,
-                    $fn = 16
-                );
-            }
-
+        genericModule(z_size = z_size, x_points = 7, y_points = 7, color = "FireBrick");
     }
 
-
     module sdCardModule(z_size = 16) {
-        x_points = 6;
-        y_points = 11;
-
-        color("RoyalBlue")
-            hull() {
-                breadboard(
-                    x_points = x_points,
-                    y_points = y_points,
-                    z_size = z_size,
-                    draw_throws = false,
-                    $fn = 16
-                );
-            }
+        genericModule(z_size = z_size, x_points = 11, y_points = 6, color = "RoyalBlue");
     }
 
     module esp32s3(z_size = 16) {
-
-        y_points = 22;
-        x_points = 11;
-
-        color("DarkSlateGray")
-            hull() {
-                breadboard(
-                    x_points = x_points,
-                    y_points = y_points,
-                    z_size = z_size,
-                    draw_throws = false,
-                    $fn = 16
-                );
-            }
+        genericModule(z_size = z_size, x_points = 22, y_points = 11, color = "DarkSlateGray");
     }
-
 
     module dc2dc(z_size = 16) {
-
-        x_points = 6;
-        y_points = 15;
-
-        color("RoyalBlue")
-            hull() {
-                breadboard(
-                    x_points = x_points,
-                    y_points = y_points,
-                    z_size = z_size,
-                    draw_throws = false,
-                    $fn = 16
-                );
-            }
+        genericModule(z_size = z_size, x_points = 15, y_points = 6, color = "RoyalBlue");
     }
-
 
     breadboard(
-        x_points = 32,
-        y_points = 25,
-        draw_throws = draw_throws,
-        $fn = 16
+        x_points = 25, y_points = 32,
+        throw_3mm_coord_list = mother_board_bolt_throws_list,
+        draw_throws = draw_throws, $fn = 16
     );
 
-    translate([0, 0, 1.5]) {
-        translateBreadboard(11, 0)
+
+    module electronicModules() {
+        translateBreadboard(3, 11)
             esp32s3();
 
-        translateBreadboard(2, 0)
+        translateBreadboard(16, 1)
             sdCardModule();
 
-        translateBreadboard(2, 14)
+        translateBreadboard(7, 0)
             dacModule();
 
-        translateBreadboard(26, 9)
-            dc2dc();     
+        translateBreadboard(0, 26)
+            dc2dc();
     }
+
+    #translate([0, 0, 1.5])
+        electronicModules();
+
+    color("red")
+    cylinder(d=2, h=10);
 }
+
 
 
 motherBoardComponent(

@@ -144,3 +144,28 @@ facade_top_on_off_button_coords = [
     case_external_x_size / 2 + 18,
     case_external_z_size / 2
 ];
+
+
+// Bolt join Piece
+bolt_join_internal_diameter = 3.5;
+bolt_join_external_diameter = 3.5 + (0.4 * 6);
+bolt_join_height = 3;
+bolt_join_fn = 500;
+
+
+// Mother board breadboard
+mother_board_x_size_point = 25;
+mother_board_y_size_point = 32;
+
+mother_board_coords = [
+    case_external_x_size / 2 - ((mother_board_x_size_point+1) * 2.54) / 2,
+    44,
+    3
+];
+
+mother_board_bolt_throws_list = [
+    [3, 2],
+    [3, 17],
+    [23, 2],
+    [23, 17],
+];
