@@ -1,8 +1,10 @@
 include <../configurations/global.scad>
 
 use <./../pieces/subpieces/breadboard.scad>
-use <./../libraries/electronics.scad>
+use <./../pieces/bolt-join-piece.scad>
 
+use <./../libraries/electronics.scad>
+use <./../libraries/commons.scad>
 
 module motherBoardComponent(
     mother_board_bolt_throws_list = mother_board_bolt_throws_list,
@@ -49,8 +51,14 @@ module motherBoardComponent(
     #translate([0, 0, 1.5])
         electronicModules();
 
-    color("red")
-    cylinder(d=2, h=10);
+        forEachCoord([
+            for (i = mother_board_bolt_throws_list) [
+                i[0] * getPointSize(),
+                i[1] * getPointSize(),
+                -bolt_join_height
+            ]
+        ])
+            boltJoinPiece();
 }
 
 

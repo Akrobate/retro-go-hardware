@@ -8,9 +8,10 @@ module boltJoinPiece(
     _fn = bolt_join_fn
 ) {
     difference() {
-        cylinder(d = external_diameter, h = height, center = true, $fn = _fn);
+        cylinder(d = external_diameter, h = height, center = false, $fn = _fn);
 
-        cylinder(d = internal_diameter, h = height * 2, center = true, $fn = _fn);
+        translate([0,0,-0.1])
+            cylinder(d = internal_diameter, h = height * 2 + 0.1 * 2, center = false, $fn = _fn);
     }
 }
 

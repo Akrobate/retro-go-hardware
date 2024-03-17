@@ -3,10 +3,6 @@ use <./../enveloppes/on-off-button-throw-enveloppe.scad>
 
 include <./../configurations/global.scad>
 
-use <../assets/speaker-28mm/speaker-28mm.scad>
-
-
-
 
 module facadeTopPiece(
     x_size = case_external_x_size - (facade_corners_offset_lenght * 2),
@@ -41,16 +37,6 @@ module facadeTopPiece(
                 onOffButtonThrowEnveloppe();
     }
 
-
-
-    translate([30,14,0])
-        rotate([180,0,0])
-        speaker28mm();
-
 }
 
-
 facadeTopPiece();
-
-translate([30,14,0])
-speaker28mm();

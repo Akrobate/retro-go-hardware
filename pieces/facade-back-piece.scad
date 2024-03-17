@@ -1,9 +1,10 @@
 include <./../configurations/global.scad>
 use <./../libraries/commons.scad>
+use <./../libraries/electronics.scad>
 
 use <./subpieces/rounded-pane.scad>
 use <../enveloppes/usb-charger-throws-enveloppe.scad>
-
+use <../enveloppes/speaker-28mm-throws-enveloppe.scad>
 
 module facadeBackPiece(
     x_size = case_external_x_size,
@@ -43,23 +44,34 @@ module facadeBackPiece(
                 cylinder(h = z_size * 2, d = 3, $fn = $fn);
 
 
-        translate([mother_board_coords[0], mother_board_coords[1], -z_size / 2])
+        translate([mother_board_coords[0], mother_board_coords[1], -z_size / 2]) {
             forEachCoord([
-                [throws_margin, throws_margin],
-                [x_size - throws_margin, throws_margin],
-                [throws_margin, y_size - throws_margin],
-                [x_size - throws_margin, y_size - throws_margin,],
+                for (i = mother_board_bolt_throws_list) [
+                    i[0] * getPointSize(),
+                    i[1] * getPointSize()
+                ]
             ])
                 cylinder(h = z_size * 2, d = 3, $fn = $fn);
+            
+            min_x = min([for (i = mother_board_bolt_throws_list) i[0]]) * getPointSize();
+            min_y = min([for (i = mother_board_bolt_throws_list) i[1]]) * getPointSize();
+            max_x = max([for (i = mother_board_bolt_throws_list) i[0]]) * getPointSize();
+            max_y = max([for (i = mother_board_bolt_throws_list) i[1]]) * getPointSize();
+            echo(min_x);
 
+            translate([min_x + (max_x - min_x) / 2, min_y + (max_y - min_y) / 2, 0 ])
+                speaker28mmThrowsEnveloppe();
+        }
 
 
         translate([usb_charger_coords[0], usb_charger_coords[1], -usb_charger_facade_y_size])
             rotate([90,0,0])
                 usbChargerThrowsEnveloppe();
     }
+    
 
 }
 
-%facadeFrontPiece();
+facadeBackPiece();
+
 

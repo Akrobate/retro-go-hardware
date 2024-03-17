@@ -169,3 +169,7 @@ mother_board_bolt_throws_list = [
     [23, 2],
     [23, 17],
 ];
+
+
+// Speaker
+speaker_facade_throw_diameter = 28 + 1;
