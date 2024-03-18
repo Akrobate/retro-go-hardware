@@ -108,7 +108,7 @@ controller_bolt_throws_list = [
 ];
 
 
-// usb charget holder
+// usb charger holder
 usb_charger_support_total_x_size = 17.57 + 15;
 usb_charger_support_total_y_size = 12;
 usb_charger_support_total_z_size = 2;
@@ -121,16 +121,16 @@ usb_charger_encaps_z_size = 1;
 
 usb_charger_facade_x_fixation_spacing = 42;
 usb_charger_facade_y_size = 1.36;
-usb_charger_facade_z_size = 12;
+usb_charger_facade_z_size = 14;
 
 usb_charger_throw_diameter = 3.5;
-usb_charger_facade_holder_z_offset = 2.5; //
+usb_charger_facade_holder_z_offset = 3.5; //
 usb_charger_fixation_facade_y_margin = 0.5;
 usb_charger_throw_offset_y = 4.5;
 usb_charger_throw_offset_x = 3.5;
 usb_charger_fadace_fn = 100;
 
-usb_charger_external_facade_main_throw_margin = 1.3;
+usb_charger_external_facade_main_throw_margin = 2;
 usb_charger_external_facade_main_throw_diameter = 3.5;
 
 usb_charger_coords = [
@@ -173,3 +173,5 @@ mother_board_bolt_throws_list = [
 
 // Speaker
 speaker_facade_throw_diameter = 28 + 1;
+speaker_facade_z_size = 1.36;
+speaker_facade_rounded_radius = 5;

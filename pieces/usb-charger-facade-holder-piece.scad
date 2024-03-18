@@ -11,7 +11,9 @@ module usbChargerFacadeHolderPiece(
     encaps_x_size = usb_charger_encaps_x_size,
     encaps_y_size = usb_charger_encaps_y_size,
     encaps_z_size = usb_charger_encaps_z_size,
+
     facade_z_size = usb_charger_facade_z_size,
+    facade_y_size = usb_charger_facade_y_size,
     facade_x_fixation_spacing = usb_charger_facade_x_fixation_spacing,
     throw_diameter = usb_charger_throw_diameter,
 
@@ -112,3 +114,5 @@ module usbChargerFacadeHolderPiece(
     }
 
 }
+
+usbChargerFacadeHolderPiece();

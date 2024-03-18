@@ -10,6 +10,7 @@ use <./assets/speaker-28mm/speaker-28mm.scad>
 
 use <./pieces/facade-front-piece.scad>
 use <./pieces/facade-top-piece.scad>
+use <./pieces/speaker-facade-piece.scad>
 
 include <./configurations/global.scad>
 
@@ -23,7 +24,7 @@ include <./configurations/global.scad>
 
 
 // Mother board // x 10
-*translate([
+translate([
     mother_board_coords[0],
     mother_board_coords[1],
     case_external_panes_thickness + mother_board_coords[2]
@@ -47,17 +48,18 @@ housingComponent();
     rotate([-90,0,0])
         onOffButton();
 
-
-// translate([28, 8, case_external_z_size + 1.36])
-//     rotate([-90,0,0])
-//         usbChargerComponent();
-
 *translate([usb_charger_coords[0], usb_charger_coords[1], -usb_charger_facade_y_size])
     rotate([90,0,0])
         usbChargerComponent();
 
 
+translate([
+    mother_board_coords[0] - speaker_facade_rounded_radius + getMin(mother_board_bolt_throws_list, 0),
+    mother_board_coords[1] - speaker_facade_rounded_radius + getMin(mother_board_bolt_throws_list, 1),
+    -speaker_facade_z_size
+])
+    speakerFacadePiece();
+
 
 
 *speaker28mm();
-
