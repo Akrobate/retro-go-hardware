@@ -1,10 +1,10 @@
 include <../configurations/global.scad>
 
 
-module boltJoinPiece(
-    internal_diameter = bolt_join_internal_diameter,
-    external_diameter = bolt_join_external_diameter,
-    height = bolt_join_height,
+module boltJoinGamePadPiece(
+    internal_diameter = bolt_join_game_pad_internal_diameter,
+    external_diameter = bolt_join_game_pad_external_diameter,
+    height = bolt_join_game_pad_height,
     _fn = bolt_join_fn
 ) {
     difference() {
@@ -15,4 +15,4 @@ module boltJoinPiece(
     }
 }
 
-boltJoinPiece();
+boltJoinGamePadPiece();

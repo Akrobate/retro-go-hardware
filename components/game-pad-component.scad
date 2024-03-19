@@ -5,6 +5,7 @@ use <./../pieces/controller-facade-piece.scad>
 use <./../pieces/directional-cross-piece.scad>
 use <./../pieces/a-b-button-piece.scad>
 use <./../pieces/small-button-piece.scad>
+use <./../pieces/bolt-join-game-pad-piece.scad>
 
 use <../libraries/electronics.scad>
 
@@ -28,7 +29,7 @@ module directionalCrossElectronicCard(
         breadboard_x_size_point,
         breadboard_y_size_point,
         throw_3mm_coord_list = bolt_throws_list,
-        draw_throws = false,
+        draw_throws = true,
         z_size = 1.5,
         $fn = 30
     );
@@ -62,7 +63,10 @@ module gamePadComponent(
     breadboard_y_size_point = controller_breadboard_y_size_point,
 
     facade_with_border_x_size = controller_facade_with_border_x_size,
-    facade_with_border_y_size = controller_facade_with_border_y_size
+    facade_with_border_y_size = controller_facade_with_border_y_size,
+
+    bolt_throws_list = controller_bolt_throws_list,
+
 ) {
 
     margin_facade_breadboard = 8;
@@ -72,8 +76,13 @@ module gamePadComponent(
     controllerFacadePiece();
 
     translate([border_margin_size_x, border_margin_size_y]) {
-        translate([0,0, -margin_facade_breadboard])    
+        translate([0,0, -margin_facade_breadboard]) {
             directionalCrossElectronicCard();
+
+            for (coords = bolt_throws_list)
+                translateBreadboard(coords[0], coords[1], 1.5)
+                    boltJoinGamePadPiece();
+        }
 
         translateBreadboard(directional_cross_points_coords[0], directional_cross_points_coords[1], -1)
             color("DarkGray")
@@ -86,8 +95,10 @@ module gamePadComponent(
         for (coords = small_button_points_coords_list)
             translateBreadboard(coords[0], coords[1], -1)
                 smallButtonPiece();
+
     }
 }
 
 
 gamePadComponent();
+

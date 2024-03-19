@@ -147,9 +147,14 @@ facade_top_on_off_button_coords = [
 
 
 // Bolt join Piece
-bolt_join_internal_diameter = 3.5;
-bolt_join_external_diameter = 3.5 + (0.4 * 6);
-bolt_join_height = 3;
+bolt_join_mother_board_internal_diameter = 3.5;
+bolt_join_mother_board_external_diameter = 3.5 + (0.4 * 6);
+bolt_join_mother_board_height = 3;
+
+bolt_join_game_pad_internal_diameter = 3.5;
+bolt_join_game_pad_external_diameter = 3.5 + (0.4 * 6);
+bolt_join_game_pad_height = 8 - 1.5;
+
 bolt_join_fn = 500;
 
 

@@ -1,7 +1,7 @@
 include <../configurations/global.scad>
 
 use <./../pieces/subpieces/breadboard.scad>
-use <./../pieces/bolt-join-piece.scad>
+use <./../pieces/bolt-join-mother-board-piece.scad>
 
 use <./../libraries/electronics.scad>
 use <./../libraries/commons.scad>
@@ -55,12 +55,11 @@ module motherBoardComponent(
             for (i = mother_board_bolt_throws_list) [
                 i[0] * getPointSize(),
                 i[1] * getPointSize(),
-                -bolt_join_height
+                -bolt_join_mother_board_height
             ]
         ])
-            boltJoinPiece();
+            boltJoinMotherBoardPiece();
 }
-
 
 
 motherBoardComponent(
