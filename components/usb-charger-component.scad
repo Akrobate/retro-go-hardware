@@ -25,7 +25,6 @@ module usbChargerComponent(
         usbCharger();
 
     usbChargerFacadeHolderPiece();
-
     
     // circuit fixation
     translate([
