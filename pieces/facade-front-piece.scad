@@ -18,6 +18,7 @@ module controllerFacadePieceThrows(
     breadboard_y_size_point = controller_breadboard_y_size_point,
 
     border_throws_margin = controller_facade_border_throws_margin,
+    braidboard_throw_margin = controller_braidboard_throw_margin,
 
     fixation_throws_diameter = facade_front_fixation_throws_diameter,
 
@@ -37,13 +38,17 @@ module controllerFacadePieceThrows(
         [facade_with_border_x_size / 2, border_throws_margin],
     ])
         cylinder(h= z_size * 2, d = fixation_throws_diameter, $fn = $fn);
-
+    
     translate([
-        facade_with_border_x_size / 2 - breadboard_x_size / 2,
-        facade_with_border_y_size / 2 - breadboard_y_size / 2,
+        facade_with_border_x_size / 2 - (breadboard_x_size + braidboard_throw_margin * 2) / 2,
+        facade_with_border_y_size / 2 - (breadboard_y_size + braidboard_throw_margin * 2) / 2,
         0
     ])
-        cube([breadboard_x_size, breadboard_y_size, z_size * 2]);
+        cube([
+            breadboard_x_size + braidboard_throw_margin * 2,
+            breadboard_y_size + braidboard_throw_margin * 2,
+            z_size * 2
+        ]);
 }
 
 

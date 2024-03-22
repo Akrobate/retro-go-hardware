@@ -58,10 +58,12 @@ controller_facade_button_throw_margin = 1;
 controller_facade_border_rounded_border_1 = 5;
 controller_facade_border_rounded_border_2 = 4;
 
-controller_facade_with_border_x_size = 78;
-controller_facade_with_border_y_size = 45;
+controller_facade_with_border_x_size = 82;
+controller_facade_with_border_y_size = 47;
 
 controller_facade_border_throws_margin = 5;
+controller_braidboard_throw_margin = 1;
+
 controller_facade_border_fn = 80;
 
 
