@@ -153,6 +153,6 @@ module facadeFrontPiece(
     }
 }
 
-%facadeFrontPiece();
+facadeFrontPiece();
 
 

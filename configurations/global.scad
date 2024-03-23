@@ -1,3 +1,5 @@
+housing_facades_throws_diameter = 3.8;
+
 // external size
 case_external_x_size = 90;
 case_external_y_size = 140;
@@ -7,7 +9,7 @@ case_external_panes_thickness = 4.8;
 facade_front_round_edges_radius = 5;
 facade_throws_margin = 5;
 
-facade_front_fixation_throws_diameter = 3.5;
+facade_front_fixation_throws_diameter = housing_facades_throws_diameter;
 
 // facade corners
 facade_corners_offset_lenght = 9;
