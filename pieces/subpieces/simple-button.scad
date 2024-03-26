@@ -5,7 +5,7 @@ module simpleButton(center = false, $fn = $fn) {
     z_size = 4;
 
     button_diameter = 3.4;
-    button_z_size = 1.4;
+    button_z_size = 0.9;
 
     module _simpleButton() {
         color("DimGray")
@@ -27,3 +27,5 @@ module simpleButton(center = false, $fn = $fn) {
         _simpleButton();
     }
 }
+
+simpleButton();

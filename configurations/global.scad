@@ -56,6 +56,8 @@ controller_breadboard_y_size_point = 9;
 
 controller_facade_z_size = 2;
 controller_facade_button_throw_margin = 1;
+controller_facade_small_button_throw_margin = 0.5;
+controller_facade_a_b_button_throw_margin = 0.5;
 
 controller_facade_border_rounded_border_1 = 5;
 controller_facade_border_rounded_border_2 = 4;
@@ -80,17 +82,17 @@ controller_cross_button_fn = 150;
 
 
 // A and B Buttons
-controller_a_b_button_diameter = 7;
+controller_a_b_button_diameter = 7.5;
 controller_a_b_button_z_size = 4;
-controller_a_b_button_support_diameter = 9;
+controller_a_b_button_support_diameter = 9.5;
 controller_a_b_button_support_z_size = 1;
 controller_a_b_button_fn = 80;
 
 
 // small Buttons
-controller_small_button_diameter = 5;
+controller_small_button_diameter = 5.5;
 controller_small_button_z_size = 3;
-controller_small_button_support_diameter = 7;
+controller_small_button_support_diameter = 7.5;
 controller_small_button_support_z_size = 1;
 controller_small_button_fn = 80;
 
@@ -150,14 +152,15 @@ facade_top_on_off_button_coords = [
 ];
 
 
-// Bolt join Piece
+// Bolt join Piece Mother board
 bolt_join_mother_board_internal_diameter = 3.5;
 bolt_join_mother_board_external_diameter = 3.5 + (0.4 * 6);
 bolt_join_mother_board_height = 3;
 
+// Bolt join Piece GamePadController
 bolt_join_game_pad_internal_diameter = 3.5;
 bolt_join_game_pad_external_diameter = 3.5 + (0.4 * 6);
-bolt_join_game_pad_height = 8 - 1.5;
+bolt_join_game_pad_height = 7.45 - 1.5;
 
 bolt_join_fn = 500;
 
