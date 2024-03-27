@@ -7,6 +7,7 @@ module boltJoinGamePadPiece(
     height = bolt_join_game_pad_height,
     _fn = bolt_join_fn
 ) {
+    echo(str("boltJoinGamePadPiece height : ", height))
     difference() {
         cylinder(d = external_diameter, h = height, center = false, $fn = _fn);
 

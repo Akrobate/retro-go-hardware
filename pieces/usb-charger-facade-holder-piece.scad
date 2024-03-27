@@ -30,6 +30,9 @@ module usbChargerFacadeHolderPiece(
     usb_charger_asset_usb_port_z_size = usb_charger_asset_usb_port_z_size  
 ) {
 
+    FIXATION_FOR_FLAT_HEAD_BOLT = false;
+
+
     difference() {
         union() {
             // circuit support
@@ -55,21 +58,29 @@ module usbChargerFacadeHolderPiece(
                     abs(usb_charger_asset_usb_port_y_offset) + throw_offset_y,
                     0
                 ]) {
-                    // cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+                    
                     translate([0, 0, 2])
                         rotate([-180,0,0])
-                            bolt($fn = 100);
-                }
+                            if (FIXATION_FOR_FLAT_HEAD_BOLT) {
+                                bolt($fn = 100);
+                            } else {
+                                cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+                            }
+                }           
                     
                 translate([
                     support_total_x_size - throw_offset_x,
                     abs(usb_charger_asset_usb_port_y_offset) + throw_offset_y,
                     0
                 ]) {
-                    // cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+                    
                     translate([0, 0, 2])
                         rotate([-180,0,0])
-                            bolt($fn = 100);
+                            if (FIXATION_FOR_FLAT_HEAD_BOLT) {
+                                bolt($fn = 100);
+                            } else {
+                                cylinder(h = support_total_z_size * 4, d = throw_diameter, center = true, $fn = fadace_fn);
+                            }
                 }
             }
 

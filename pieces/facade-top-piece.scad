@@ -15,7 +15,8 @@ module facadeTopPiece(
     case_external_panes_thickness = case_external_panes_thickness,
     $fn = facade_fn
 ) {
-    
+    echo(str("x_size: ", x_size, " y_size: ", y_size, " z_size: ", z_size));
+
     difference() {
         color("BurlyWood")
             cube([x_size, y_size, z_size]);
