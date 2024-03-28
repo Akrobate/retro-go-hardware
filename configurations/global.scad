@@ -160,7 +160,7 @@ bolt_join_mother_board_height = 3;
 // Bolt join Piece GamePadController
 bolt_join_game_pad_internal_diameter = 3.5;
 bolt_join_game_pad_external_diameter = 3.5 + (0.4 * 6);
-bolt_join_game_pad_height = 7.75 - 1.5; // 7.45
+bolt_join_game_pad_height = 6.5;
 
 bolt_join_fn = 500;
 

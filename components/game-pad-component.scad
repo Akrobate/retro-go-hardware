@@ -66,10 +66,12 @@ module gamePadComponent(
     facade_with_border_y_size = controller_facade_with_border_y_size,
 
     bolt_throws_list = controller_bolt_throws_list,
-
+    bolt_join_height = bolt_join_game_pad_height,
 ) {
 
-    margin_facade_breadboard = 7.75;
+    breadboard_z_size = 1.5;
+
+    margin_facade_breadboard = bolt_join_height + breadboard_z_size;
     border_margin_size_x = (facade_with_border_x_size - getSizeFromPointCount(breadboard_x_size_point)) / 2;
     border_margin_size_y = (facade_with_border_y_size - getSizeFromPointCount(breadboard_y_size_point)) / 2;
 
@@ -80,7 +82,7 @@ module gamePadComponent(
             directionalCrossElectronicCard();
 
             for (coords = bolt_throws_list)
-                translateBreadboard(coords[0], coords[1], 1.50)
+                translateBreadboard(coords[0], coords[1], breadboard_z_size)
                     boltJoinGamePadPiece();
         }
 
