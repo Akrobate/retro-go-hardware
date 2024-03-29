@@ -86,7 +86,7 @@ module gamePadComponent(
                     boltJoinGamePadPiece();
         }
 
-        *translateBreadboard(directional_cross_points_coords[0], directional_cross_points_coords[1], -1)
+        translateBreadboard(directional_cross_points_coords[0], directional_cross_points_coords[1], -1)
             color("DarkGray")
                 directionalCrossPiece();
 
@@ -94,7 +94,7 @@ module gamePadComponent(
             translateBreadboard(coords[0], coords[1], -1)
                 abButtonPiece();
 
-        *for (coords = small_button_points_coords_list)
+        for (coords = small_button_points_coords_list)
             translateBreadboard(coords[0], coords[1], -1)
                 smallButtonPiece();
 
