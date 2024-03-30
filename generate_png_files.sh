@@ -16,7 +16,6 @@ facade-top-piece
 screen-frame-facade-piece
 screen-frame-piece
 screen-glass-piece
-sdcard-holder-piece
 small-button-piece
 speaker-facade-piece
 usb-charger-facade-holder-piece
