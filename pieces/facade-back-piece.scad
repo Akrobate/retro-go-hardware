@@ -25,7 +25,7 @@ module facadeBackPiece(
 
     $fn = facade_fn
 ) {
-    echo(str("x_size: ", x_size, " y_size: ", y_size, " z_size: ", z_size));
+    echo(str("facadeBackPiece ", "x_size: ", x_size, " y_size: ", y_size, " z_size: ", z_size));
 
     difference() {
         color("BurlyWood")

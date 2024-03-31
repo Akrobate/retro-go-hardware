@@ -11,6 +11,8 @@ module facadeBottomPiece(
 
     $fn = facade_fn
 ) {
+
+    echo(str("facadeBottomPiece ", "x_size: ", x_size, " y_size: ", y_size, " z_size: ", z_size));
     difference() {
         color("BurlyWood")
             cube([x_size, y_size, z_size]);
