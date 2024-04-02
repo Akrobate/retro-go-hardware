@@ -1,5 +1,10 @@
 # retro-go-hardware
 
+## Configurations
+
+You can configure all projects params from `configurations/global.scad`.
+
+
 ## Main project
 
 ![RetroGoHarware main preview](png_files/main.png)

@@ -77,4 +77,19 @@ module usbChargerFixationPiece(
 
 }
 
-usbChargerFixationPiece();
+
+translate(
+    [
+        0,
+        0,
+        usb_charger_support_total_y_size - abs(usb_charger_asset_usb_port_y_offset) - usb_charger_fixation_facade_y_margin
+    ]
+)
+    rotate(
+        [
+            -90,
+            0,
+            0
+        ]
+    )
+        usbChargerFixationPiece();
