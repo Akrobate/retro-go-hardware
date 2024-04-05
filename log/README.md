@@ -1,5 +1,18 @@
 # Construction log
 
+### Electronic prototyping
+
+<p float="left">
+  <img src="images/20240405_130854.jpg" width="300" />
+  <img src="images/20240405_130910.jpg" width="300" />
+</p>
+
+<p float="left">
+  <img src="images/20240405_130726.jpg" width="300" />
+  <img src="images/20240405_130824.jpg" width="300" />
+</p>
+
+
 ### Front facade
 
 <p float="left">
