@@ -1,6 +1,8 @@
 include <./../configurations/global.scad>
 
 
+// @todo: Enlarge differences blocks to avoid graphical rendering glitches
+
 module facadeCornerPiece(
     round_radius = facade_front_round_edges_radius,
     z_size = case_external_z_size - (case_external_panes_thickness * 2),
@@ -15,7 +17,7 @@ module facadeCornerPiece(
     y_branch_offset_lenght = facade_corners_offset_lenght,
 
     correction_offset_thickness = 0.0, //
-    correction_offset_length = 0.0, //
+    correction_offset_length = facade_corners_correction_offset_length,
 
     throw_diameter = insert_throw_diameter,
     throw_depth = insert_throw_length,
