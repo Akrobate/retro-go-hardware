@@ -4,6 +4,9 @@
 
 You can configure all projects params from `configurations/global.scad`.
 
+## Construction log
+
+You can see my [construction log](log/README.md) with real device photos and steps
 
 ## Main project
 
