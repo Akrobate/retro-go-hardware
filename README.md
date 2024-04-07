@@ -43,12 +43,19 @@ You can see my [construction log](log/README.md) with real device photos and ste
 ![screen-frame-piece.scad](png_files/pieces/screen-frame-piece.png)
 ![screen-glass-piece.scad](png_files/pieces/screen-glass-piece.png)
 
-### Mother board
-![bolt-join-mother-board-piece.scad](png_files/pieces/bolt-join-mother-board-piece.png)
-
 ### Speaker
 ![speaker-facade-piece.scad](png_files/pieces/speaker-facade-piece.png)
 
 ### USB Charger
 ![usb-charger-facade-holder-piece.scad](png_files/pieces/usb-charger-facade-holder-piece.png)
 ![usb-charger-fixation-piece.scad](png_files/pieces/usb-charger-fixation-piece.png)
+
+### Mother board
+
+Mother board positionning components
+
+![Mother board positionning](png_files/assets/braidbaord-throws-components.png)
+
+Mother bard fixation throws
+
+![bolt-join-mother-board-piece.scad](png_files/pieces/bolt-join-mother-board-piece.png)
