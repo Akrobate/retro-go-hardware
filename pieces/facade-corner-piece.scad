@@ -1,8 +1,5 @@
 include <./../configurations/global.scad>
 
-
-// @todo: Enlarge differences blocks to avoid graphical rendering glitches
-
 module facadeCornerPiece(
     round_radius = facade_front_round_edges_radius,
     z_size = case_external_z_size - (case_external_panes_thickness * 2),
@@ -16,7 +13,7 @@ module facadeCornerPiece(
     y_branch_offset_thickness = case_external_panes_thickness,
     y_branch_offset_lenght = facade_corners_offset_lenght,
 
-    correction_offset_thickness = 0.0, //
+    correction_offset_thickness = facade_corners_correction_offset_thickness,
     correction_offset_length = facade_corners_correction_offset_length,
 
     throw_diameter = insert_throw_diameter,
@@ -28,6 +25,7 @@ module facadeCornerPiece(
 ) {
 
     difference() {
+
         union() {
             translate([round_radius, round_radius, 0])
                 cylinder(h = z_size, r = round_radius, $fn = $fn);
@@ -47,9 +45,7 @@ module facadeCornerPiece(
                 ]);
         }
 
-
-
-        // x branch throws
+        // x face enclosure
         translate([-correction_offset_length, correction_offset_thickness, 0])
             translate([x_branch_offset_lenght, -main_thickness + x_branch_offset_thickness, - z_size / 2])
                 cube([
@@ -58,7 +54,7 @@ module facadeCornerPiece(
                     z_size * 2
                 ]);
 
-        // x branch throws
+        // y face enclosure
         translate([correction_offset_thickness, -correction_offset_length, 0])
             translate([-main_thickness + y_branch_offset_thickness, y_branch_offset_lenght, - z_size / 2])
                 cube([

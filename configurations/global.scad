@@ -17,6 +17,7 @@ facade_corners_main_x_size = 19;
 facade_corners_main_y_size = 19;
 facade_corners_main_thickness = 11;
 facade_corners_correction_offset_length = 0.2;
+facade_corners_correction_offset_thickness = 0.0;
 facade_fn = 100;
 
 
