@@ -236,7 +236,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "CustomLibrary"
+    ]
   },
   "meta": {
     "filename": "retro-go-hardware.kicad_pro",
