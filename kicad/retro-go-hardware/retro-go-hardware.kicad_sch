@@ -863,6 +863,175 @@
 				)
 			)
 		)
+		(symbol "CustomLibrary:SD-Card-SPI-Module"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SD-Card-SPI-Module"
+				(at 0.762 11.938 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 5.08 -1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 -1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 -1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 5.08 -1.27 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SD-Card-SPI-Module_1_1"
+				(rectangle
+					(start -7.62 10.16)
+					(end 7.62 -7.62)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at -10.16 7.62 0)
+					(length 2.54)
+					(name "3.3V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "CS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "MISO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "MOSI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Switch:SW_Push"
 			(pin_numbers hide)
 			(pin_names
@@ -1239,6 +1408,26 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 81.28) (xy 123.19 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dca7988-5493-410f-afd4-bab149b9730a")
+	)
+	(wire
+		(pts
+			(xy 123.19 96.52) (xy 123.19 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18bbd32b-75a2-4a8a-8840-e2152adb9985")
+	)
+	(wire
+		(pts
 			(xy 180.34 99.06) (xy 180.34 102.87)
 		)
 		(stroke
@@ -1249,6 +1438,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 88.9) (xy 142.24 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c19cf76-3ac9-4242-9724-9d5ac0f9aef4")
+	)
+	(wire
+		(pts
 			(xy 135.89 48.26) (xy 135.89 45.72)
 		)
 		(stroke
@@ -1256,6 +1455,26 @@
 			(type default)
 		)
 		(uuid "3e5ba40d-933b-4da4-be1b-f486f7b0842a")
+	)
+	(wire
+		(pts
+			(xy 127 81.28) (xy 123.19 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "429611d4-0e57-4b57-b61d-43c142eef5cf")
+	)
+	(wire
+		(pts
+			(xy 123.19 86.36) (xy 142.24 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48ed1382-6db9-402b-9381-8749a299e79e")
 	)
 	(wire
 		(pts
@@ -1299,6 +1518,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 102.87) (xy 127 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8efb4c93-3f81-4752-86ba-91a4e25fa89d")
+	)
+	(wire
+		(pts
 			(xy 177.8 96.52) (xy 180.34 96.52)
 		)
 		(stroke
@@ -1309,6 +1538,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 93.98) (xy 142.24 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7bbec18-e71d-45c5-a560-5330bbe8e4db")
+	)
+	(wire
+		(pts
 			(xy 142.24 45.72) (xy 135.89 45.72)
 		)
 		(stroke
@@ -1316,6 +1555,16 @@
 			(type default)
 		)
 		(uuid "d2aa096e-9cd3-436b-ad73-275876ce71be")
+	)
+	(wire
+		(pts
+			(xy 123.19 91.44) (xy 142.24 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f50fa3bf-e10f-4d3f-b429-edbfd5ba1b3e")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1378,6 +1627,72 @@
 			(project "retro-go-hardware"
 				(path "/c7a77f24-7c25-4509-9d7f-e0356b19303a"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 127 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "12ca5f21-fcc8-44cc-97aa-7f0764be0d8b")
+		(property "Reference" "#PWR04"
+			(at 127 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 127 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 127 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8b92b1ed-f2e6-4fa3-a8b7-7ae491c5cda0")
+		)
+		(instances
+			(project "retro-go-hardware"
+				(path "/c7a77f24-7c25-4509-9d7f-e0356b19303a"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -1512,6 +1827,152 @@
 			(project "retro-go-hardware"
 				(path "/c7a77f24-7c25-4509-9d7f-e0356b19303a"
 					(reference "SW1-button-A")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CustomLibrary:SD-Card-SPI-Module")
+		(at 113.03 88.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "512591a1-82fc-47db-b48d-d967da1941c2")
+		(property "Reference" "SD-Card-SPI-Module1"
+			(at 113.03 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 113.03 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 107.95 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 107.95 87.63 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin ""
+			(uuid "09828ccb-206c-4b19-94fa-5acca2d7ffc9")
+		)
+		(pin ""
+			(uuid "45fd59ef-3b4f-4618-bcc9-20e7275886bd")
+		)
+		(pin ""
+			(uuid "0d751078-d4e1-4617-8b16-460f0e3cd9d9")
+		)
+		(pin ""
+			(uuid "be107e2b-f2f5-4995-b847-d05dee25bfcf")
+		)
+		(pin ""
+			(uuid "aedd642e-b319-44d5-9070-796fc2461763")
+		)
+		(pin ""
+			(uuid "aeb2e2ee-a8aa-4db7-a3cc-64bacaf2af10")
+		)
+		(instances
+			(project "retro-go-hardware"
+				(path "/c7a77f24-7c25-4509-9d7f-e0356b19303a"
+					(reference "SD-Card-SPI-Module1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 127 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "522d0342-68af-4384-8111-dcfa2995bfb8")
+		(property "Reference" "#PWR03"
+			(at 127 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 127 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 127 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 127 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e4ba53dc-ffd8-4a92-ba8b-5474852b7086")
+		)
+		(instances
+			(project "retro-go-hardware"
+				(path "/c7a77f24-7c25-4509-9d7f-e0356b19303a"
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
