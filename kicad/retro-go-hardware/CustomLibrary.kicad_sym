@@ -1710,19 +1710,6 @@
 				(hide yes)
 			)
 		)
-		(symbol "TP4056-DW01A-Module_0_1"
-			(rectangle
-				(start -12.7 15.24)
-				(end -12.7 15.24)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
-		)
 		(symbol "TP4056-DW01A-Module_1_1"
 			(rectangle
 				(start -12.7 7.62)
