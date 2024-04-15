@@ -1049,8 +1049,9 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "ILI9341"
 			(at -17.526 13.97 0)
+			(do_not_autoplace)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1058,18 +1059,19 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ILI9341-Module"
+		(property "Value" ""
 			(at 1.905 13.97 0)
+			(do_not_autoplace)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "ILI9341-Module"
+		(property "Footprint" ""
 			(at 0 -17.78 0)
-			(show_name)
 			(do_not_autoplace)
 			(effects
 				(font
@@ -1136,16 +1138,6 @@
 					(justify left)
 				)
 			)
-			(text "SD Card Slot"
-				(at -5.461 -3.048 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-				)
-			)
 			(text "SPI Interface"
 				(at -5.461 -0.508 0)
 				(effects
@@ -1193,96 +1185,6 @@
 					)
 				)
 				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -20.32 10.16 0)
-				(length 2.54)
-				(name "SD_CS"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -20.32 7.62 0)
-				(length 2.54)
-				(name "SD_MOSI"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at -20.32 5.08 0)
-				(length 2.54)
-				(name "SD_MISO"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "12"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -20.32 2.54 0)
-				(length 2.54)
-				(name "SD_SCK"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "13"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at -20.32 0 0)
-				(length 2.54)
-				(name "FLASH_CD"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "14"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1401,7 +1303,7 @@
 			(pin input line
 				(at 20.32 -5.08 180)
 				(length 2.54)
-				(name "LED"
+				(name "BLK"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1806,19 +1708,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(symbol "TP4056-DW01A-Module_0_1"
-			(rectangle
-				(start -12.7 15.24)
-				(end -12.7 15.24)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
 			)
 		)
 		(symbol "TP4056-DW01A-Module_1_1"
