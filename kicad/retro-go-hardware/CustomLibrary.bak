@@ -64,7 +64,7 @@
 			(pin power_in line
 				(at -12.7 5.08 0)
 				(length 2.54)
-				(name "BCLK-I2S-SCK"
+				(name "BCLK-SCK"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -82,7 +82,7 @@
 			(pin power_in line
 				(at -12.7 2.54 0)
 				(length 2.54)
-				(name "DIN-I2S-SD"
+				(name "DIN-SD"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -136,7 +136,7 @@
 			(pin power_in line
 				(at -12.7 7.62 0)
 				(length 2.54)
-				(name "LRC-I2S-WS"
+				(name "LRC-WS"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -154,7 +154,43 @@
 			(pin power_in line
 				(at -12.7 -2.54 0)
 				(length 2.54)
-				(name "SD-L-R-out_select"
+				(name "SD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 12.7 2.54 180)
+				(length 2.54)
+				(name "SPK+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 12.7 -2.54 180)
+				(length 2.54)
+				(name "SPK-"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -172,7 +208,7 @@
 			(pin power_in line
 				(at -12.7 -7.62 0)
 				(length 2.54)
-				(name "Vin-3V-to-6V"
+				(name "Vin-3V-6V"
 					(effects
 						(font
 							(size 1.27 1.27)
