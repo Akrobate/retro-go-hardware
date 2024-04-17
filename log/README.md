@@ -32,9 +32,21 @@
 ### Housing
 
 <p float="left">
-  <img src="images/20240401_175111.jpg" width="300" />
-  <img src="images/20240401_175414.jpg" width="300" />
+  <img src="images/20240406_113949.jpg" width="300" />
+  <img src="images/20240406_113856.jpg" width="300" />
 </p>
+
+<p float="left">
+  <img src="images/20240406_114252.jpg" width="300" />
+  <img src="images/20240401_175111.jpg" width="300" />
+</p>
+
+
+<p float="left">
+  <img src="images/20240401_175414.jpg" width="300" />
+  <img src="images/20240406_115032.jpg" width="300" />
+</p>
+
 
 
 ### Screen
