@@ -6,8 +6,9 @@
 	(paper "A4")
 	(title_block
 		(title "RetroGoHardware")
-		(date "2024-04-09")
-		(rev "0.1")
+		(date "2024-04-18")
+		(rev "1.0")
+		(comment 1 "https://github.com/Akrobate/retro-go-hardware")
 	)
 	(lib_symbols
 		(symbol "CustomLibrary:ESP32-S3-DevKitC-1"

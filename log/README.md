@@ -1,5 +1,10 @@
 # Construction log
 
+### Electronic Schematic
+
+<img src="../electronic/electronic-schematic.png" width="600" />
+
+
 ### Electronic prototyping
 
 <p float="left">
