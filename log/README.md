@@ -34,6 +34,14 @@
 </p>
 
 
+### Controller Electronics
+
+<p float="left">
+  <img src="images/20240420_185925.jpg" width="300" />
+  <img src="images/20240420_185934.jpg" width="300" />
+</p>
+
+
 ### Housing
 
 <p float="left">
