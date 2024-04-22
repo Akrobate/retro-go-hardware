@@ -4,6 +4,10 @@ use <./../enveloppes/on-off-button-throw-enveloppe.scad>
 include <./../configurations/global.scad>
 
 
+/**
+ *  facadeTopPiece - Piece can be printed or CNC cutted
+ *  #3DPrint, #CNC
+ */
 module facadeTopPiece(
     x_size = case_external_x_size - (facade_corners_offset_lenght * 2),
     y_size = case_external_z_size - (case_external_panes_thickness * 2),
