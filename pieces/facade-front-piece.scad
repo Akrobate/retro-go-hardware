@@ -83,7 +83,10 @@ module facadeScreenThrows() {
 }
 
 
-
+/**
+ *  facadeFrontPiece - Piece can be printed or CNC cutted
+ *  #3DPrint, #CNC
+ */
 module facadeFrontPiece(
     x_size = case_external_x_size,
     y_size = case_external_y_size,

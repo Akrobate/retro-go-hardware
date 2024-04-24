@@ -6,6 +6,11 @@ use <./subpieces/rounded-pane.scad>
 use <../enveloppes/usb-charger-throws-enveloppe.scad>
 use <../enveloppes/speaker-28mm-throws-enveloppe.scad>
 
+
+/**
+ *  facadeBackPiece - Piece can be printed or CNC cutted
+ *  #3DPrint, #CNC
+ */
 module facadeBackPiece(
     x_size = case_external_x_size,
     y_size = case_external_y_size,
