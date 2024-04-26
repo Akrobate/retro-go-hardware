@@ -41,6 +41,11 @@
   <img src="images/20240420_185934.jpg" width="300" />
 </p>
 
+### Motherboard
+<p float="left">
+  <img src="images/20240422_162225.jpg" width="300" />
+  <img src="images/20240422_162536.jpg" width="300" />
+</p>
 
 ### Housing
 
