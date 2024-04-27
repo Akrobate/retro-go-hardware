@@ -47,6 +47,13 @@
   <img src="images/20240422_162536.jpg" width="300" />
 </p>
 
+### Mounting
+<p float="left">
+  <img src="images/20240422_164248.jpg" width="300" />
+  <img src="images/20240422_164314.jpg" width="300" />
+</p>
+
+
 ### Housing
 
 <p float="left">
