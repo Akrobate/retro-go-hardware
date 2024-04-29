@@ -56,6 +56,10 @@
   <img src="images/20240422_173136.jpg" width="300" />
   <img src="images/20240422_231729.jpg" width="300" />
 </p>
+<p float="left">
+  <img src="images/20240422_232208.jpg" width="300" />
+  <img src="images/20240422_232219.jpg" width="300" />
+</p>
 
 ### Housing
 
