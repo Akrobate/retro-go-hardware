@@ -1,5 +1,12 @@
 # retro-go-hardware
 
+## Hardware for the RetroGo (ducalex)
+
+Software for this hardware
+
+https://github.com/Akrobate/retro-go
+
+
 ## Configurations
 
 You can configure all projects params from `configurations/global.scad`.
