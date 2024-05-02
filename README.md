@@ -10,6 +10,22 @@ https://github.com/ducalex/retro-go
 
 To be sure to have the most adapted version for now for this hardware use https://github.com/Akrobate/retro-go, but most recent version of firmware is on https://github.com/ducalex/retro-go. The author accepted my important updates so this harware should perfectly work with the original code.
 
+## Generate png previews
+
+```bash
+./generate_png_files.sh
+```
+
+Output files will be stored in `./png_files/`
+
+
+## Generate png previews
+
+```bash
+./generate_stl_files.sh
+```
+
+Output files will be stored in `./stl_files/`
 
 ## Configurations
 
