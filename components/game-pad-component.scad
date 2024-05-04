@@ -53,7 +53,13 @@ module placeCrossElectronicButton(point_coords, z, $fn = $fn) {
             simpleButton(center = true, $fn = $fn);
 }
 
-
+/**
+ * gamePadComponent
+ * @name gamePadComponent
+ * @description Gamepad
+ * @type component
+ * @parent root
+ */
 module gamePadComponent(
     directional_cross_points_coords = controller_directional_cross_points_coords,
     small_button_points_coords_list = [controller_start_button_points_coords, controller_select_button_points_coords, controller_menu_button_points_coords, controller_option_button_points_coords],
