@@ -8,6 +8,13 @@ include <../configurations/global.scad>
 include <../assets/lcd-screen/configurations.scad>
 
 
+/**
+ * screenComponent
+ * @name screenComponent
+ * @description Screen, screenholder and screen glass component
+ * @type component
+ * @parent root
+ */
 module screenComponent(
     electronic_board_z_size = screen_asset_electronic_board_z_size,
     panes_thickness = case_external_panes_thickness,

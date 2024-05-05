@@ -8,6 +8,13 @@ use <../pieces/usb-charger-facade-holder-piece.scad>
 use <../enveloppes/usb-charger-throws-enveloppe.scad>
 
 
+/**
+ * usbChargerComponent
+ * @name usbChargerComponent
+ * @description usb charger and holder
+ * @type component
+ * @parent root
+ */
 module usbChargerComponent(
     support_total_x_size = usb_charger_support_total_x_size,
     support_total_z_size = usb_charger_support_total_z_size,

@@ -7,7 +7,13 @@ use <./../pieces/facade-corner-piece.scad>
 
 include <./../configurations/global.scad>
 
-
+/**
+ * housingComponent
+ * @name housingComponent
+ * @description The box casing of the device
+ * @type component
+ * @parent root
+ */
 module housingComponent() {
     translate([0, 0, case_external_z_size - case_external_panes_thickness])
         facadeFrontPiece();
