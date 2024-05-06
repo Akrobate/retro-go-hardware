@@ -6,6 +6,14 @@ use <./../pieces/bolt-join-mother-board-piece.scad>
 use <./../libraries/electronics.scad>
 use <./../libraries/commons.scad>
 
+
+/**
+ * motherBoardComponent
+ * @name motherBoardComponent
+ * @description Mother board component
+ * @type component
+ * @parent root
+ */
 module motherBoardComponent(
     mother_board_bolt_throws_list = mother_board_bolt_throws_list,
     draw_throws = false

@@ -7,6 +7,7 @@ use <./../pieces/facade-corner-piece.scad>
 
 include <./../configurations/global.scad>
 
+
 /**
  * housingComponent
  * @name housingComponent
