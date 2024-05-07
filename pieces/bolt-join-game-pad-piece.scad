@@ -1,6 +1,13 @@
 include <../configurations/global.scad>
 
-
+/**
+ * boltJoinGamePadPiece
+ * @name boltJoinGamePadPiece
+ * @description Joins to hold controller electronic board with controller facade
+ * @type piece
+ * @parent gamePadComponent
+ * @stl
+ */
 module boltJoinGamePadPiece(
     internal_diameter = bolt_join_game_pad_internal_diameter,
     external_diameter = bolt_join_game_pad_external_diameter,
