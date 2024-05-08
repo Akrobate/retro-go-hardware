@@ -2,6 +2,14 @@ use <./subpieces/controller-breadboard-facade.scad>
 
 include <../configurations/global.scad>
 
+/**
+ * controllerFacadePiece
+ * @name controllerFacadePiece
+ * @description Controller facade piece
+ * @type piece
+ * @parent gamePadComponent
+ * @stl
+ */
 module controllerFacadePiece(
     breadboard_x_size_point = controller_breadboard_x_size_point,
     breadboard_y_size_point = controller_breadboard_y_size_point,

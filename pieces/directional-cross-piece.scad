@@ -3,6 +3,14 @@ use <./subpieces/rounded-pane.scad>
 
 include <../configurations/global.scad>
 
+/**
+ * directionalCrossPiece
+ * @name directionalCrossPiece
+ * @description Cross button of gamepad
+ * @type piece
+ * @parent gamePadComponent
+ * @stl
+ */
 module directionalCrossPiece(
     button_x_y_size = controller_cross_button_x_y_size,
     button_z_size = controller_cross_button_z_size,
