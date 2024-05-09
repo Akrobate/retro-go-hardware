@@ -6,10 +6,13 @@ use <./subpieces/rounded-pane.scad>
 use <../enveloppes/usb-charger-throws-enveloppe.scad>
 use <../enveloppes/speaker-28mm-throws-enveloppe.scad>
 
-
-/**
- *  facadeBackPiece - Piece can be printed or CNC cutted
- *  #3DPrint, #CNC
+ /**
+ * facadeBackPiece
+ * @name facadeBackPiece
+ * @description Piece can be printed or CNC cutted #3DPrint, #CNC
+ * @type piece
+ * @parent gamePadComponent
+ * @stl
  */
 module facadeBackPiece(
     x_size = case_external_x_size,
