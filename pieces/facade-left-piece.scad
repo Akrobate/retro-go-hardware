@@ -4,8 +4,12 @@ use <./../libraries/commons.scad>
 include <./../configurations/global.scad>
 
 /**
- *  facadeLeftPiece - Piece can be printed or CNC cutted
- *  #3DPrint, #CNC
+ * facadeLeftPiece
+ * @name facadeLeftPiece
+ * @description Piece can be printed or CNC cutted #3DPrint, #CNC
+ * @type piece
+ * @parent housingComponent
+ * @stl
  */
 module facadeLeftPiece(
     x_size = case_external_y_size - (facade_corners_offset_lenght * 2),

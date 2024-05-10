@@ -5,8 +5,12 @@ include <./../configurations/global.scad>
 
 
 /**
- *  facadeTopPiece - Piece can be printed or CNC cutted
- *  #3DPrint, #CNC
+ * facadeTopPiece
+ * @name facadeTopPiece
+ * @description Piece can be printed or CNC cutted #3DPrint, #CNC
+ * @type piece
+ * @parent housingComponent
+ * @stl
  */
 module facadeTopPiece(
     x_size = case_external_x_size - (facade_corners_offset_lenght * 2),
