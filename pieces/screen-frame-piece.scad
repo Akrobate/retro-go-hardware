@@ -3,6 +3,14 @@ include <../configurations/global.scad>
 
 use <../enveloppes/screen-enveloppe.scad>
 
+/**
+ * screenFramePiece
+ * @name screenFramePiece
+ * @description Piece 3D printed
+ * @type piece
+ * @parent screenComponent
+ * @stl
+ */
 module screenFramePiece(
     electronic_board_x_size = screen_asset_electronic_board_x_size,
     electronic_board_y_size = screen_asset_electronic_board_y_size,

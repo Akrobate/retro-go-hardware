@@ -8,7 +8,7 @@ include <./../configurations/global.scad>
  * @name facadeBottomPiece
  * @description Piece can be printed or CNC cutted #3DPrint, #CNC
  * @type piece
- * @parent gamePadComponent
+ * @parent housingComponent
  * @stl
  */
 module facadeBottomPiece(

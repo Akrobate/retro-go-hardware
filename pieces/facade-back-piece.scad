@@ -11,7 +11,7 @@ use <../enveloppes/speaker-28mm-throws-enveloppe.scad>
  * @name facadeBackPiece
  * @description Piece can be printed or CNC cutted #3DPrint, #CNC
  * @type piece
- * @parent gamePadComponent
+ * @parent housingComponent
  * @stl
  */
 module facadeBackPiece(

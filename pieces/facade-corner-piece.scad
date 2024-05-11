@@ -1,5 +1,14 @@
 include <./../configurations/global.scad>
 
+
+/**
+ * facadeCornerPiece
+ * @name facadeCornerPiece
+ * @description Piece can be printed or CNC cutted #3DPrint, #CNC
+ * @type piece
+ * @parent housingComponent
+ * @stl
+ */
 module facadeCornerPiece(
     round_radius = facade_front_round_edges_radius,
     z_size = case_external_z_size - (case_external_panes_thickness * 2),
