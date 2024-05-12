@@ -2,6 +2,14 @@ use <./subpieces/round-button.scad>
 
 include <../configurations/global.scad>
 
+/**
+ * smallButtonPiece
+ * @name smallButtonPiece
+ * @description Cross button of gamepad
+ * @type piece
+ * @parent gamePadComponent
+ * @stl
+ */
 module smallButtonPiece(
     diameter = controller_small_button_diameter,
     button_z_size = controller_small_button_z_size,
