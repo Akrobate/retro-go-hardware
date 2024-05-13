@@ -5,7 +5,14 @@ use <./../libraries/electronics.scad>
 use <./subpieces/rounded-pane.scad>
 use <../enveloppes/speaker-28mm-throws-enveloppe.scad>
 
-
+/**
+ * speakerFacadePiece
+ * @name speakerFacadePiece
+ * @description Speaker protection
+ * @type piece
+ * @parent root
+ * @stl
+ */
 module speakerFacadePiece(
     z_size = speaker_facade_z_size,
     mother_board_bolt_throws_list = mother_board_bolt_throws_list,
