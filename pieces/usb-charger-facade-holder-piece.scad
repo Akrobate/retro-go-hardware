@@ -3,6 +3,15 @@ include <../assets/usb-charger/configurations.scad>
 use <../enveloppes/usb-c-connector-enveloppe.scad>
 use <../enveloppes/bolt.scad>
 
+
+
+/**
+ * usbChargerFacadeHolderPiece
+ * @name usbChargerFacadeHolderPiece
+ * @description Usb charger facade and holder piece
+ * @type component
+ * @parent usbChargerComponent
+ */
 module usbChargerFacadeHolderPiece(
     support_total_x_size = usb_charger_support_total_x_size,
     support_total_y_size = usb_charger_support_total_y_size,

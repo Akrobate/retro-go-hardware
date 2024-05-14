@@ -1,6 +1,13 @@
 include <../configurations/global.scad>
 include <../assets/usb-charger/configurations.scad>
 
+/**
+ * usbChargerFacadeHolderPiece
+ * @name usbChargerFacadeHolderPiece
+ * @description Usb charger fixation to facade holder piece
+ * @type component
+ * @parent usbChargerComponent
+ */
 module usbChargerFixationPiece(
     support_total_x_size = usb_charger_support_total_x_size,
     support_total_y_size = usb_charger_support_total_y_size - abs(usb_charger_asset_usb_port_y_offset) - usb_charger_fixation_facade_y_margin,
