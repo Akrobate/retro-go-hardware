@@ -22,30 +22,22 @@ module screenComponent(
     frame_piece_glass_embedding_z_depth = screen_frame_piece_glass_embedding_z_depth
 ) {
 
-    translate([0, 0, -0.01])
+    epsilone = 0.01;
+    screenFramePiece_z_position = panes_thickness + electronic_board_z_size;
+    screenFrameFacadePiece_z_position = screenFramePiece_z_position + frame_piece_z_size;
+    screenGlassPiece_z_position = screenFrameFacadePiece_z_position - frame_piece_glass_embedding_z_depth + epsilone;
+
+    translate([0, 0, -epsilone])
         screen($fn = 100);
 
-    translate([0, 0, panes_thickness + electronic_board_z_size])
+    translate([0, 0, screenFramePiece_z_position])
         color("DarkSlateGray")
             screenFramePiece();
 
-    translate(
-        [
-            0,
-            0,
-            panes_thickness + electronic_board_z_size + (frame_piece_z_size - frame_piece_glass_embedding_z_depth) + 0.01
-        ]
-    )
+    translate([0, 0, screenGlassPiece_z_position])
         screenGlassPiece();
 
-
-    translate(
-        [
-            0,
-            0,
-            panes_thickness + electronic_board_z_size + frame_piece_z_size
-        ]
-    )
+    translate([0, 0, screenFrameFacadePiece_z_position])
         color("DarkSlateGray")
             screenFrameFacadePiece();
 }
