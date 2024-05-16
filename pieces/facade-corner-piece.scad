@@ -73,7 +73,6 @@ module facadeCornerPiece(
                 ]);
 
 
-
         // x branch throws
         translate([x_branch_offset_lenght + throw_x_margin,  x_branch_offset_thickness - 0.1, throw_y_margin])
             rotate([-90,0,0])

@@ -53,7 +53,6 @@ module usbChargerFixationPiece(
                 encaps_2_z_size + 0.01,
             ]);
 
-
         nut_encaps_diameter = 6;
         nut_encaps_depth = 2.8;
         // Throws
@@ -67,8 +66,7 @@ module usbChargerFixationPiece(
                 rotate([0,0,90])
                 cylinder(h = 5, r = nut_encaps_diameter / 2 / cos(30) , $fn = 6);
         }
-        
-            
+         
         translate([
             support_total_x_size - throw_offset_x,
             throw_offset_y,
@@ -79,9 +77,7 @@ module usbChargerFixationPiece(
                 rotate([0,0,90])
                 cylinder(h = 5, r = nut_encaps_diameter / 2 / cos(30) , $fn = 6);
         }
-
     }
-
 }
 
 
@@ -92,11 +88,5 @@ translate(
         usb_charger_support_total_y_size - abs(usb_charger_asset_usb_port_y_offset) - usb_charger_fixation_facade_y_margin
     ]
 )
-    rotate(
-        [
-            -90,
-            0,
-            0
-        ]
-    )
+    rotate([-90, 0, 0])
         usbChargerFixationPiece();
