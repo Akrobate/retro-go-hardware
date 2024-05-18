@@ -3,7 +3,7 @@
  * @name roundButton
  * @description Base method for creating buttons
  * @type Supbiece
- * @parent usbChargerComponent
+ * @parent 
  */
 module roundButton(
     diameter,

@@ -1,3 +1,10 @@
+/**
+ * roundedPane
+ * @name roundedPane
+ * @description roundedPane
+ * @type Supbiece
+ * @parent 
+ */
 module roundedPane(
     x_y_z_coords,
     r1,

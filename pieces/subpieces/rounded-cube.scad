@@ -1,4 +1,10 @@
-
+/**
+ * roundedCube
+ * @name roundedCube
+ * @description roundedCube
+ * @type Supbiece
+ * @parent 
+ */
 module roundedCube(x_y_z_coords, r, center = false, $fn = $fn) {
 
     x = x_y_z_coords[0];
