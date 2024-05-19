@@ -1,5 +1,12 @@
 use <./rounded-cube.scad>
 
+/**
+ * directionalCross
+ * @name directionalCross
+ * @description Direction cross
+ * @type Supbiece
+ * @parent 
+ */
 module directionalCross(
     button_x_size,
     button_y_size,
