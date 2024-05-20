@@ -1,6 +1,10 @@
 
-module forEachCoord(throws_coords_list) {
-    for (coords = throws_coords_list)
+/**
+ * forEachCoord
+ * Wrapper to apply child on each element
+ */
+module forEachCoord(coords_list) {
+    for (coords = coords_list)
         translate(
             [
                 coords[0] == undef ? 0 : coords[0],
