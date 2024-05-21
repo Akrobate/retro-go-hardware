@@ -1,5 +1,12 @@
 use <../../libraries/electronics.scad>
 
+/**
+ * breadboard
+ * @name breadboard
+ * @description Electronic breadbord
+ * @type asset
+ * @parent 
+ */
 module breadboard(
     x_points,
     y_points,
