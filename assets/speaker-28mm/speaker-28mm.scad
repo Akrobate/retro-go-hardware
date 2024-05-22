@@ -1,5 +1,12 @@
 include <configurations.scad>
 
+/**
+ * speaker28mm
+ * @name speaker28mm
+ * @description Simple design of 28mm diameter speaker
+ * @type asset
+ * @parent 
+ */
 module speaker28mm(
     speaker_asset_main_diameter = speaker_asset_main_diameter,
     speaker_asset_main_z_size = speaker_asset_main_z_size,

@@ -1,5 +1,12 @@
 include <./configurations.scad>
 
+/**
+ * usbCharger
+ * @name usbCharger
+ * @description Usb Li-Ion charger board
+ * @type asset
+ * @parent 
+ */
 module usbCharger(
     electronic_card_x_size = usb_charger_asset_electronic_card_x_size,
     electronic_card_y_size = usb_charger_asset_electronic_card_y_size,
