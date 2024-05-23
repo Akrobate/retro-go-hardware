@@ -39,21 +39,21 @@ module housingComponent() {
             facadeLeftPiece();
 
     module corners() {
-        // Corners (bottom left)
+        // Corner (bottom left)
         translate([0, 0, case_external_panes_thickness])
             facadeCornerPiece();
 
-        // Corners (bottom right)
+        // Corner (bottom right)
         translate([case_external_x_size, 0, case_external_panes_thickness])
             rotate([0, 0, 90])
                 facadeCornerPiece();
 
-        // Corners (top left)
+        // Corner (top left)
         translate([0, case_external_y_size, case_external_panes_thickness])
             rotate([0, 0, -90])
                 facadeCornerPiece();
 
-        // Corners (bottom right)
+        // Corner (bottom right)
         translate([case_external_x_size, case_external_y_size, case_external_panes_thickness])
             rotate([0, 0, -180])
                 facadeCornerPiece();

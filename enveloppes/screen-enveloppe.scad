@@ -2,8 +2,14 @@ include <../assets/lcd-screen/configurations.scad>
 
 use <../libraries/commons.scad>
 
+/**
+ * screenFixationThrows
+ * @name screenFixationThrows
+ * @description screenFixationThrows
+ * @type enveloppe
+ * @parent root
+ */
 module screenFixationThrows(
-    // screen configurations
     electronic_board_x_size = screen_asset_electronic_board_x_size,
     electronic_board_y_size = screen_asset_electronic_board_y_size,
     x_margin_left = screen_asset_x_margin_throws_left,

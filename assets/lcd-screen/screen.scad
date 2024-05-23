@@ -1,6 +1,12 @@
 include <./configurations.scad>
 
-
+/**
+ * screen
+ * @name screen
+ * @description Screen board
+ * @type asset
+ * @parent 
+ */
 module screen(
     electronic_board_x_size = screen_asset_electronic_board_x_size,
     electronic_board_y_size = screen_asset_electronic_board_y_size,

@@ -1,3 +1,10 @@
+/**
+ * bolt
+ * @name bolt
+ * @description bolt
+ * @type enveloppe
+ * @parent root
+ */
 module bolt($fn = $fn) {
     
     epsilone = 0.01;
