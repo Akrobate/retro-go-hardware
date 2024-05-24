@@ -48,6 +48,13 @@ module screenFixationThrows(
 }
 
 
+/**
+ * screenMainThrow
+ * @name screenMainThrow
+ * @description screenMainThrow
+ * @type enveloppe
+ * @parent root
+ */
 module screenMainThrow(
     electronic_board_x_size = screen_asset_electronic_board_x_size,
     electronic_board_y_size = screen_asset_electronic_board_y_size,
@@ -74,7 +81,13 @@ module screenMainThrow(
         );
 }
 
-
+/**
+ * screenConnectorThrow
+ * @name screenConnectorThrow
+ * @description screenConnectorThrow
+ * @type enveloppe
+ * @parent root
+ */
 module screenConnectorThrow(
     electronic_board_y_size = screen_asset_electronic_board_y_size
 ) {
@@ -96,7 +109,13 @@ module screenConnectorThrow(
         );
 }
 
-
+/**
+ * sceenVisibleZoneCube
+ * @name sceenVisibleZoneCube
+ * @description sceenVisibleZoneCube
+ * @type enveloppe
+ * @parent root
+ */
 module sceenVisibleZoneCube(
     x_margin = 0,
     y_margin = 0,

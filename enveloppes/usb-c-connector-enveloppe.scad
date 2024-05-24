@@ -1,5 +1,12 @@
 include <../assets/usb-charger/configurations.scad>
 
+/**
+ * usbCConnectorEnveloppe
+ * @name usbCConnectorEnveloppe
+ * @description usbCConnectorEnveloppe
+ * @type enveloppe
+ * @parent root
+ */
 module usbCConnectorEnveloppe(
     usb_port_x_size = usb_charger_asset_usb_port_x_size,
     usb_port_y_size = usb_charger_asset_usb_port_y_size,
