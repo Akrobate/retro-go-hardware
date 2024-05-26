@@ -140,3 +140,5 @@ module sceenVisibleZoneCube(
             ]
         );
 }
+
+sceenVisibleZoneCube();

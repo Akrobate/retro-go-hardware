@@ -13,3 +13,5 @@ module onOffButtonThrowEnveloppe(
 ) {
     cylinder(h = z_size, d = throw_diameter, center = true, $fn = $fn);
 }
+
+onOffButtonThrowEnveloppe();

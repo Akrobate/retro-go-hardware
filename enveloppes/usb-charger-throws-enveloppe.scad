@@ -46,3 +46,5 @@ module usbChargerThrowsEnveloppe(
                 + usb_charger_external_facade_main_throw_margin * 2,
         ]);
 }
+
+usbChargerThrowsEnveloppe();
