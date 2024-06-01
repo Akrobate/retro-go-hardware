@@ -10,6 +10,17 @@ https://github.com/ducalex/retro-go
 
 To be sure to have the most adapted version for now for this hardware use https://github.com/Akrobate/retro-go, but most recent version of firmware is on https://github.com/ducalex/retro-go. The author accepted my important updates so this harware should perfectly work with the original code.
 
+
+## Construction log
+
+You can see my [construction log](log/README.md) with real device photos and steps
+
+
+## Pieces for project
+
+[List of all electronic and not electronics parts](electronic/README.md)
+
+
 ## Generate png previews
 
 ```bash
@@ -31,9 +42,6 @@ Output files will be stored in `./stl_files/`
 
 You can configure all projects params from `configurations/global.scad`.
 
-## Construction log
-
-You can see my [construction log](log/README.md) with real device photos and steps
 
 ## Main project
 
