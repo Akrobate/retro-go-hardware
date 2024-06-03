@@ -8,7 +8,7 @@
 | Microcontroller| ESP32-S3 ESP32-S3-DevKitC-1 Cartes de Développement XTVTX 2 pièces ESP32 S3 WROOM-1-N16R8 Module 16M de mémoire Flash à Extension Externe 8M PSRAM avec WiFi, Bluetooth 5.0 pour Arduino | 26,99€ | 2 | 13,50€ |
 | SD Card reader| Jopto 6 Pièces Mini Module de Carte SD Module d'extension de Stockage Micro SD Module de Lecteur de Carte Micro SD TF Adaptateur de Carte Compatible avec Arduino AVR Arm | 9,99€ | 6 | 1,67€ |
 | Battery holder and charger| GTIWUNG 6 Pièces 3.7V 18650 Support de Batterie Boîtier en Plastique Boîte de Rangement avec Wire Leads + 10 Pièces Interface d'entrée de Type C USB 5V 1A 18650 Module de Chargeur de Batterie | 9,99€ | 6 | 1,67€ |
-| Sound I2S mocule| Lot de 4 amplificateurs audio Max98357 I2S 3 W avec interface décodeur Dac I2S Classe D sans filtre | 16,99€ | 4 | 4,25€ |
+| Sound I2S module| Lot de 4 amplificateurs audio Max98357 I2S 3 W avec interface décodeur Dac I2S Classe D sans filtre | 16,99€ | 4 | 4,25€ |
 | Speaker | Weewooday Petits Haut-Parleurs 2 W 8 ohms Haut-Parleur à Aimant Interne Rond à Coque Métallique Micro Haut-Parleur Interne pour Mini Haut-Parleurs, DVD, EVD, Mini Haut-Parleurs Multimédia | 9,99€ | 6 | 1,67€ |
 
 
