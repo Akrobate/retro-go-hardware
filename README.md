@@ -13,7 +13,7 @@ To be sure to have the most adapted version for now for this hardware use https:
 
 ## Construction log
 
-You can see my [construction log](log/README.md) with real device photos and steps
+You can see my [construction log](construction-log/README.md) with real device photos and steps
 
 
 ## Pieces for project
