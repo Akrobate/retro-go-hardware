@@ -24,5 +24,5 @@ usb-charger-fixation-piece
 # Model generation
 for piece in "${PIECES[@]}"; do
     echo "Pièce : $piece"
-    openscad -o stl_files/$piece.stl pieces/$piece.scad
+    openscad -o stl_files/$piece.stl 3D-models/pieces/$piece.scad
 done
