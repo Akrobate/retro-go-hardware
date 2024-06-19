@@ -73,9 +73,11 @@ function facadeScreenCalculateXYOffset(
 
 
 
-module facadeScreenThrows() {
+module facadeScreenThrows(
+    fixation_throws_diameter = facade_front_fixation_throws_diameter
+) {
     screenFixationThrows(
-        throw_diameter = facade_front_fixation_throws_diameter,
+        throw_diameter = fixation_throws_diameter,
         $fn = 100
     );
     screenMainThrow();
@@ -100,7 +102,7 @@ module facadeFrontPiece(
     controller_position_coords = [],
 
     throws_margin = facade_throws_margin,
-    fixation_throws_diameter = facade_front_fixation_throws_diameter,
+    throws_diameter = housing_facades_throws_diameter,
 
     round_edges_radius = facade_front_round_edges_radius,
     facade_with_border_x_size = controller_facade_with_border_x_size,
@@ -131,7 +133,7 @@ module facadeFrontPiece(
                 [throws_margin, y_size - throws_margin],
                 [x_size - throws_margin, y_size - throws_margin,],
             ])
-                cylinder(h = z_size * 2, d = fixation_throws_diameter, $fn = $fn);
+                cylinder(h = z_size * 2, d = throws_diameter, $fn = $fn);
 
         translate(
             concat(
