@@ -7,8 +7,6 @@ use <./../pieces/a-b-button-piece.scad>
 use <./../pieces/small-button-piece.scad>
 use <./../pieces/bolt-join-game-pad-piece.scad>
 
-use <../libraries/electronics.scad>
-
 include <../configurations/global.scad>
 
 module directionalCrossElectronicCard(

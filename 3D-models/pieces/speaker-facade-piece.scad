@@ -1,7 +1,6 @@
 include <./../configurations/global.scad>
 use <./../libraries/commons.scad>
-use <./../libraries/electronics.scad>
-
+use <./subpieces/breadboard.scad>
 use <./subpieces/rounded-pane.scad>
 use <../enveloppes/speaker-28mm-throws-enveloppe.scad>
 

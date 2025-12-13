@@ -3,7 +3,6 @@ include <../configurations/global.scad>
 use <./../pieces/subpieces/breadboard.scad>
 use <./../pieces/bolt-join-mother-board-piece.scad>
 
-use <./../libraries/electronics.scad>
 use <./../libraries/commons.scad>
 
 

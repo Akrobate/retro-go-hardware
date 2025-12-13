@@ -1,6 +1,5 @@
 
 use <./breadboard.scad>
-use <../../libraries/electronics.scad>
 use <./directional-cross.scad>
 use <../../enveloppes/bolt.scad>
 use <./rounded-pane.scad>
