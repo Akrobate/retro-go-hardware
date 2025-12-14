@@ -1,6 +1,6 @@
 use <./directional-cross.scad>
 use <./rounded-pane.scad>
-use <./breadboard.scad>
+use <../../assets/breadboard/breadboard.scad>
 use <../../enveloppes/bolt.scad>
 
 directionnalCrossFacade(

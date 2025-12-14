@@ -1,9 +1,9 @@
 use <./subpieces/rounded-pane.scad>
-use <./subpieces/breadboard.scad>
+use <../assets/breadboard/breadboard.scad>
 use <../enveloppes/screen-enveloppe.scad>
-use <./../libraries/commons.scad>
+use <../libraries/commons.scad>
 
-include <./../configurations/global.scad>
+include <../configurations/global.scad>
 include <../assets/lcd-screen/configurations.scad>
 
 

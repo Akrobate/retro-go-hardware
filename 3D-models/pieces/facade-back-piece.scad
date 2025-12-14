@@ -1,6 +1,6 @@
 include <./../configurations/global.scad>
 use <./../libraries/commons.scad>
-use <./subpieces/breadboard.scad>
+use <../assets/breadboard/breadboard.scad>
 
 use <./subpieces/rounded-pane.scad>
 use <../enveloppes/usb-charger-throws-enveloppe.scad>
