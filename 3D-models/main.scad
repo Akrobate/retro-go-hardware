@@ -1,5 +1,5 @@
 use <./components/game-pad-component.scad>
-use <./components/battery.scad>
+use <./assets/battery/battery.scad>
 use <./components/housing-component.scad>
 use <./components/screen-component.scad>
 use <./components/mother-board-component.scad>
