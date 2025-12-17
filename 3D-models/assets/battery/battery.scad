@@ -1,3 +1,5 @@
+include <./configurations.scad>
+
 /**
  * battery
  * @name battery
@@ -5,9 +7,15 @@
  * @type component
  * @parent root
  */
-module battery() {
+module battery(
+    center = false,
+) {
     color("red")
-    cube([75.5, 21.4, 21.4], center = false);
+    cube([
+        battery_x_size,
+        battery_y_size,
+        battery_z_size
+    ], center = center);
 }
 
 
