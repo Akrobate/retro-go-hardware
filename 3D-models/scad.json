@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "author": "",
-  "repository": ""
+  "repository": "",
+  "dependencies": {
+    "tp4056-holder": "https://gitlab.com/openscad-modules/tp4056-holder.git"
+  }
 }
