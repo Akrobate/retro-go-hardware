@@ -22,7 +22,7 @@ module usbChargerFixationPiece(
     throw_offset_x = usb_charger_throw_offset_x,
     throw_diameter = usb_charger_throw_diameter,
 
-    fadace_fn = usb_charger_fadace_fn
+    fadace_fn = usb_charger_facade_fn
 ) {
     difference() {
         translate([0, 0, 0])

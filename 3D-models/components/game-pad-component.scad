@@ -62,7 +62,7 @@ module placeCrossElectronicButton(point_coords, z, $fn = $fn) {
 module gamePadComponent(
     directional_cross_points_coords = controller_directional_cross_points_coords,
     small_button_points_coords_list = [controller_start_button_points_coords, controller_select_button_points_coords, controller_menu_button_points_coords, controller_option_button_points_coords],
-    a_b_button_points_coors_list = [controller_a_button_points_coords, controller_b_button_points_coords],
+    a_b_button_points_coords_list = [controller_a_button_points_coords, controller_b_button_points_coords],
 
     breadboard_x_size_point = controller_breadboard_x_size_point,
     breadboard_y_size_point = controller_breadboard_y_size_point,
@@ -95,7 +95,7 @@ module gamePadComponent(
             color("DarkGray")
                 directionalCrossPiece();
 
-        for (coords = a_b_button_points_coors_list)
+        for (coords = a_b_button_points_coords_list)
             translateBreadboard(coords[0], coords[1], -1)
                 abButtonPiece();
 

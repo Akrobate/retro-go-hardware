@@ -22,7 +22,6 @@ module usbChargerFacadeHolderPiece(
     encaps_z_size = usb_charger_encaps_z_size,
 
     facade_z_size = usb_charger_facade_z_size,
-    facade_y_size = usb_charger_facade_y_size,
     facade_x_fixation_spacing = usb_charger_facade_x_fixation_spacing,
     throw_diameter = usb_charger_throw_diameter,
 
@@ -30,7 +29,7 @@ module usbChargerFacadeHolderPiece(
 
     throw_offset_y = usb_charger_throw_offset_y,
     throw_offset_x = usb_charger_throw_offset_x,
-    fadace_fn = usb_charger_fadace_fn,
+    fadace_fn = usb_charger_facade_fn,
 
     usb_charger_asset_electronic_card_x_size = usb_charger_asset_electronic_card_x_size,
     usb_charger_asset_electronic_card_z_size = usb_charger_asset_electronic_card_z_size,

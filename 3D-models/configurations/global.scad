@@ -135,7 +135,7 @@ usb_charger_facade_holder_z_offset = 3.5; //
 usb_charger_fixation_facade_y_margin = 0.5;
 usb_charger_throw_offset_y = 4.5;
 usb_charger_throw_offset_x = 3.5;
-usb_charger_fadace_fn = 100;
+usb_charger_facade_fn = 100;
 
 usb_charger_external_facade_main_throw_margin = 2;
 usb_charger_external_facade_main_throw_diameter = housing_facades_throws_diameter;
@@ -171,7 +171,7 @@ mother_board_x_size_point = 25;
 mother_board_y_size_point = 32;
 
 mother_board_coords = [
-    case_external_x_size / 2 - ((mother_board_x_size_point+1) * 2.54) / 2,
+    case_external_x_size / 2 - ((mother_board_x_size_point + 1) * 2.54) / 2,
     44,
     3
 ];

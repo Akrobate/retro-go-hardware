@@ -15,6 +15,8 @@ use <../libraries/commons.scad>
  */
 module motherBoardComponent(
     mother_board_bolt_throws_list = mother_board_bolt_throws_list,
+    mother_board_x_size_point = mother_board_x_size_point,
+    mother_board_y_size_point = mother_board_y_size_point,
     draw_throws = false
 ) {
 
@@ -35,7 +37,8 @@ module motherBoardComponent(
     }
 
     breadboard(
-        x_points = 25, y_points = 32,
+        x_points = mother_board_x_size_point,
+        y_points = mother_board_y_size_point,
         throw_3mm_coord_list = mother_board_bolt_throws_list,
         draw_throws = draw_throws, $fn = 16
     );
