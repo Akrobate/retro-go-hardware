@@ -7,7 +7,6 @@ include <./../configurations/global.scad>
  * @description Piece can be printed or CNC cutted #3DPrint, #CNC
  * @type piece
  * @parent housingComponent
- * @stl
  */
 module facadeCornerPiece(
     round_radius = facade_front_round_edges_radius,
@@ -104,6 +103,12 @@ module facadeCornerPiece(
 }
 
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 facadeCornerPiece(
     $fn = 80
 );

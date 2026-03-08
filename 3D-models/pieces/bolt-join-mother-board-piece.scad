@@ -6,7 +6,6 @@ include <../configurations/global.scad>
  * @description Joins to hold mother board
  * @type piece
  * @parent motherBoardComponent
- * @stl
  */
 module boltJoinMotherBoardPiece(
     internal_diameter = bolt_join_mother_board_internal_diameter,
@@ -22,4 +21,10 @@ module boltJoinMotherBoardPiece(
     }
 }
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 boltJoinMotherBoardPiece();

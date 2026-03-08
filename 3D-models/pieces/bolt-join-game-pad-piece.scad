@@ -6,7 +6,6 @@ include <../configurations/global.scad>
  * @description Joins to hold controller electronic board with controller facade
  * @type piece
  * @parent gamePadComponent
- * @stl
  */
 module boltJoinGamePadPiece(
     internal_diameter = bolt_join_game_pad_internal_diameter,
@@ -23,4 +22,10 @@ module boltJoinGamePadPiece(
     }
 }
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 boltJoinGamePadPiece();

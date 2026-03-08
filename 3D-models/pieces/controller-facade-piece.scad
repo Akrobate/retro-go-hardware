@@ -8,7 +8,6 @@ include <../configurations/global.scad>
  * @description Controller facade piece
  * @type piece
  * @parent gamePadComponent
- * @stl
  */
 module controllerFacadePiece(
     breadboard_x_size_point = controller_breadboard_x_size_point,
@@ -80,5 +79,10 @@ module controllerFacadePiece(
         );       
 }
 
-
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 controllerFacadePiece();

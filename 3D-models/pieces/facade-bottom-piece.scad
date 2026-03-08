@@ -3,13 +3,12 @@ use <./../libraries/commons.scad>
 include <./../configurations/global.scad>
 
 
-  /**
+/**
  * facadeBottomPiece
  * @name facadeBottomPiece
  * @description Piece can be printed or CNC cutted #3DPrint, #CNC
  * @type piece
  * @parent housingComponent
- * @stl
  */
 module facadeBottomPiece(
     x_size = case_external_x_size - (facade_corners_offset_lenght * 2),
@@ -37,5 +36,10 @@ module facadeBottomPiece(
     }
 }
 
-
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 facadeBottomPiece();

@@ -12,7 +12,6 @@ use <../enveloppes/speaker-28mm-throws-enveloppe.scad>
  * @description Piece can be printed or CNC cutted #3DPrint, #CNC
  * @type piece
  * @parent housingComponent
- * @stl
  */
 module facadeBackPiece(
     x_size = case_external_x_size,
@@ -79,10 +78,16 @@ module facadeBackPiece(
             rotate([90,0,0])
                 usbChargerThrowsEnveloppe();
     }
-    
 
 }
 
+
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 facadeBackPiece();
 
 

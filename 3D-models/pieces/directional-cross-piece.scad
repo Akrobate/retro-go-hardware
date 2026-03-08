@@ -9,7 +9,6 @@ include <../configurations/global.scad>
  * @description Cross button of gamepad
  * @type piece
  * @parent gamePadComponent
- * @stl
  */
 module directionalCrossPiece(
     button_x_y_size = controller_cross_button_x_y_size,
@@ -61,4 +60,10 @@ module directionalCrossPiece(
     }
 }
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 directionalCrossPiece();
