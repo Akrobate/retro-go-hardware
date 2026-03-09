@@ -56,4 +56,10 @@ module sdcardHolderPiece() {
 
 }
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 sdcardHolderPiece();

@@ -134,5 +134,11 @@ module usbChargerFacadeHolderPiece(
 
 }
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 rotate([90,0,0])
     usbChargerFacadeHolderPiece();

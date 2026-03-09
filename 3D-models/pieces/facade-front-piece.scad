@@ -89,7 +89,6 @@ module facadeScreenThrows(
  * @description Piece can be printed or CNC cutted #3DPrint, #CNC
  * @type piece
  * @parent housingComponent
- * @stl
  */
 module facadeFrontPiece(
     x_size = case_external_x_size,

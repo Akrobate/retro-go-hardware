@@ -9,7 +9,6 @@ include <./../configurations/global.scad>
  * @description Piece can be printed or CNC cutted #3DPrint, #CNC
  * @type piece
  * @parent housingComponent
- * @stl
  */
 module facadeLeftPiece(
     x_size = case_external_y_size - (facade_corners_offset_lenght * 2),
@@ -36,5 +35,10 @@ module facadeLeftPiece(
 
 }
 
-
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 facadeLeftPiece();

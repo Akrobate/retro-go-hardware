@@ -81,6 +81,12 @@ module usbChargerFixationPiece(
 }
 
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 translate(
     [
         0,

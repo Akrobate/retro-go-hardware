@@ -10,7 +10,6 @@ use <../enveloppes/speaker-28mm-throws-enveloppe.scad>
  * @description Speaker protection
  * @type piece
  * @parent root
- * @stl
  */
 module speakerFacadePiece(
     z_size = speaker_facade_z_size,
@@ -67,5 +66,10 @@ function getMin(list, coord) = min([for (i = list) i[coord]]) * getPointSize();
 function getMax(list, coord) = max([for (i = list) i[coord]]) * getPointSize();
 
 
-
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 speakerFacadePiece();

@@ -9,7 +9,6 @@ use <../enveloppes/screen-enveloppe.scad>
  * @description Piece CNC cutted
  * @type piece
  * @parent screenComponent
- * @stl
  */
 module screenGlassPiece(
     visible_zone_x_margin = screen_glass_visible_zone_x_margin,
@@ -24,4 +23,10 @@ module screenGlassPiece(
         );
 }
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 screenGlassPiece();

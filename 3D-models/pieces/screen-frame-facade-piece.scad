@@ -9,7 +9,6 @@ use <../enveloppes/screen-enveloppe.scad>
  * @description Piece 3D Prined
  * @type piece
  * @parent screenComponent
- * @stl
  */
 module screenFrameFacadePiece(
     electronic_board_x_size = screen_asset_electronic_board_x_size,
@@ -69,5 +68,10 @@ module screenFrameFacadePiece(
     }
 }
 
-
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 screenFrameFacadePiece();

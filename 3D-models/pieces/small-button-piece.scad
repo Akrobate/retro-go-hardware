@@ -8,7 +8,6 @@ include <../configurations/global.scad>
  * @description Cross button of gamepad
  * @type piece
  * @parent gamePadComponent
- * @stl
  */
 module smallButtonPiece(
     diameter = controller_small_button_diameter,
@@ -28,4 +27,10 @@ module smallButtonPiece(
         );
 }
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 smallButtonPiece();
