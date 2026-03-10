@@ -107,5 +107,10 @@ module gamePadComponent(
 }
 
 
+/**
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 gamePadComponent();
 

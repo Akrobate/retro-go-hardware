@@ -43,4 +43,9 @@ module screenComponent(
 }
 
 
+/**
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 screenComponent();

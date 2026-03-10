@@ -33,7 +33,6 @@ module usbChargerComponent(
 
     usbChargerFacadeHolderPiece();
     
-    // circuit fixation
     translate([
         0,
         abs(usb_charger_asset_usb_port_y_offset) + fixation_facade_y_margin,
@@ -44,4 +43,9 @@ module usbChargerComponent(
 
 }
 
+/**
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 usbChargerComponent();

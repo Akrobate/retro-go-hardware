@@ -72,6 +72,11 @@ module motherBoardComponent(
 }
 
 
+/**
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 motherBoardComponent(
     draw_throws = true
 );
