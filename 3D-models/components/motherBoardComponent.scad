@@ -1,7 +1,7 @@
 include <../configurations/global.scad>
 
 use <../assets/breadboard/breadboard.scad>
-use <../pieces/bolt-join-mother-board-piece.scad>
+use <../pieces/boltJoinMotherBoardPiece.scad>
 
 use <../libraries/commons.scad>
 

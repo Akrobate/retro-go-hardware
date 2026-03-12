@@ -3,9 +3,9 @@ use <./../pieces/subpieces/simple-button.scad>
 
 use <./../pieces/controller-facade-piece.scad>
 use <./../pieces/directional-cross-piece.scad>
-use <./../pieces/a-b-button-piece.scad>
+use <./../pieces/abButtonPiece.scad>
 use <./../pieces/small-button-piece.scad>
-use <./../pieces/bolt-join-game-pad-piece.scad>
+use <./../pieces/boltJoinGamePadPiece.scad>
 
 include <../configurations/global.scad>
 
