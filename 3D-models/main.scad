@@ -8,8 +8,8 @@ use <./components/usbChargerComponent.scad>
 use <./assets/on-off-button/on-off-button.scad>
 use <./assets/speaker-28mm/speaker-28mm.scad>
 
-use <./pieces/facade-front-piece.scad>
-use <./pieces/facade-top-piece.scad>
+use <./pieces/facadeFrontPiece.scad>
+use <./pieces/facadeTopPiece.scad>
 use <./pieces/speaker-facade-piece.scad>
 
 include <./configurations/global.scad>

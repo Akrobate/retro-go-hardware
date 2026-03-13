@@ -1,9 +1,9 @@
-use <./../pieces/facade-front-piece.scad>
-use <./../pieces/facade-back-piece.scad>
-use <./../pieces/facade-top-piece.scad>
-use <./../pieces/facade-bottom-piece.scad>
-use <./../pieces/facade-left-piece.scad>
-use <./../pieces/facade-corner-piece.scad>
+use <./../pieces/facadeFrontPiece.scad>
+use <./../pieces/facadeBackPiece.scad>
+use <./../pieces/facadeTopPiece.scad>
+use <./../pieces/facadeBottomPiece.scad>
+use <./../pieces/facadeLeftPiece.scad>
+use <./../pieces/facadeCornerPiece.scad>
 
 include <./../configurations/global.scad>
 

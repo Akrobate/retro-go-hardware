@@ -1,8 +1,8 @@
 use <../assets/breadboard/breadboard.scad>
 use <./../pieces/subpieces/simple-button.scad>
 
-use <./../pieces/controller-facade-piece.scad>
-use <./../pieces/directional-cross-piece.scad>
+use <./../pieces/controllerFacadePiece.scad>
+use <./../pieces/directionalCrossPiece.scad>
 use <./../pieces/abButtonPiece.scad>
 use <./../pieces/small-button-piece.scad>
 use <./../pieces/boltJoinGamePadPiece.scad>
