@@ -10,7 +10,7 @@ use <./assets/speaker-28mm/speaker-28mm.scad>
 
 use <./pieces/facadeFrontPiece.scad>
 use <./pieces/facadeTopPiece.scad>
-use <./pieces/speaker-facade-piece.scad>
+use <./pieces/speakerFacadePiece.scad>
 
 include <./configurations/global.scad>
 

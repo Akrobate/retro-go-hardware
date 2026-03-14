@@ -2,8 +2,8 @@ include <../configurations/global.scad>
 include <../assets/usb-charger/configurations.scad>
 use <../assets/usb-charger/usb-charger.scad>
 
-use <../pieces/usb-charger-fixation-piece.scad>
-use <../pieces/usb-charger-facade-holder-piece.scad>
+use <../pieces/usbChargerFixationPiece.scad>
+use <../pieces/usbChargerFacadeHolderPiece.scad>
 
 use <../enveloppes/usb-charger-throws-enveloppe.scad>
 

@@ -1,8 +1,8 @@
 use <../assets/lcd-screen/screen.scad>
 use <../enveloppes/screen-enveloppe.scad>
-use <../pieces/screen-frame-piece.scad>
-use <../pieces/screen-frame-facade-piece.scad>
-use <../pieces/screen-glass-piece.scad>
+use <../pieces/screenFramePiece.scad>
+use <../pieces/screenFrameFacadePiece.scad>
+use <../pieces/screenGlassPiece.scad>
 
 include <../configurations/global.scad>
 include <../assets/lcd-screen/configurations.scad>
