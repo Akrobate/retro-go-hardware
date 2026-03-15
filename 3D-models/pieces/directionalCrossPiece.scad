@@ -1,5 +1,5 @@
-use <./subpieces/directional-cross.scad>
-use <./subpieces/rounded-pane.scad>
+use <./subpieces/directionalCross.scad>
+use <./subpieces/roundedPane.scad>
 
 include <../configurations/global.scad>
 

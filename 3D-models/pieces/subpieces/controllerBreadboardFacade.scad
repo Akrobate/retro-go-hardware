@@ -1,8 +1,8 @@
 
 use <../../assets/breadboard/breadboard.scad>
-use <./directional-cross.scad>
+use <./directionalCross.scad>
 use <../../enveloppes/bolt.scad>
-use <./rounded-pane.scad>
+use <./roundedPane.scad>
 
 
 module controllerBreadboardFacade(

@@ -1,5 +1,5 @@
 use <../assets/breadboard/breadboard.scad>
-use <./../pieces/subpieces/simple-button.scad>
+use <./../pieces/subpieces/simpleButton.scad>
 
 use <./../pieces/controllerFacadePiece.scad>
 use <./../pieces/directionalCrossPiece.scad>

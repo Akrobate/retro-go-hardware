@@ -1,4 +1,4 @@
-use <./rounded-cube.scad>
+use <./roundedCube.scad>
 
 /**
  * directionalCross

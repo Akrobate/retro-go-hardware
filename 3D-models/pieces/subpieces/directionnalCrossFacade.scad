@@ -1,5 +1,5 @@
-use <./directional-cross.scad>
-use <./rounded-pane.scad>
+use <./directionalCross.scad>
+use <./roundedPane.scad>
 use <../../assets/breadboard/breadboard.scad>
 use <../../enveloppes/bolt.scad>
 

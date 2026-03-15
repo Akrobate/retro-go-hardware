@@ -1,4 +1,4 @@
-use <./subpieces/rounded-pane.scad>
+use <./subpieces/roundedPane.scad>
 use <../assets/breadboard/breadboard.scad>
 use <../enveloppes/screen-enveloppe.scad>
 use <../libraries/commons.scad>
