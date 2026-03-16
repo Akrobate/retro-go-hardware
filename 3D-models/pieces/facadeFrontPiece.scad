@@ -1,6 +1,6 @@
 use <./subpieces/roundedPane.scad>
 use <../assets/breadboard/breadboard.scad>
-use <../enveloppes/screen-enveloppe.scad>
+use <../enveloppes/screenEnveloppe.scad>
 use <../libraries/commons.scad>
 
 include <../configurations/global.scad>

@@ -1,7 +1,7 @@
 include <../assets/lcd-screen/configurations.scad>
 include <../configurations/global.scad>
 
-use <../enveloppes/screen-enveloppe.scad>
+use <../enveloppes/screenEnveloppe.scad>
 
 /**
  * screenFrameFacadePiece

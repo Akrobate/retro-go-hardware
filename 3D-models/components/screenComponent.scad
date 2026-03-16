@@ -1,5 +1,5 @@
 use <../assets/lcd-screen/screen.scad>
-use <../enveloppes/screen-enveloppe.scad>
+use <../enveloppes/screenEnveloppe.scad>
 use <../pieces/screenFramePiece.scad>
 use <../pieces/screenFrameFacadePiece.scad>
 use <../pieces/screenGlassPiece.scad>

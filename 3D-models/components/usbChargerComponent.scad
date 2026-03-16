@@ -5,7 +5,7 @@ use <../assets/usb-charger/usb-charger.scad>
 use <../pieces/usbChargerFixationPiece.scad>
 use <../pieces/usbChargerFacadeHolderPiece.scad>
 
-use <../enveloppes/usb-charger-throws-enveloppe.scad>
+use <../enveloppes/usbChargerThrowsEnveloppe.scad>
 
 
 /**

@@ -3,8 +3,8 @@ use <./../libraries/commons.scad>
 use <../assets/breadboard/breadboard.scad>
 
 use <./subpieces/roundedPane.scad>
-use <../enveloppes/usb-charger-throws-enveloppe.scad>
-use <../enveloppes/speaker-28mm-throws-enveloppe.scad>
+use <../enveloppes/usbChargerThrowsEnveloppe.scad>
+use <../enveloppes/speaker28mmThrowsEnveloppe.scad>
 
  /**
  * facadeBackPiece

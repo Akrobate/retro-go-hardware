@@ -1,5 +1,5 @@
 use <./../libraries/commons.scad>
-use <./../enveloppes/on-off-button-throw-enveloppe.scad>
+use <./../enveloppes/onOffButtonThrowEnveloppe.scad>
 
 include <./../configurations/global.scad>
 

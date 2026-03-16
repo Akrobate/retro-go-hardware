@@ -1,6 +1,6 @@
 include <../configurations/global.scad>
 include <../assets/usb-charger/configurations.scad>
-use <../enveloppes/usb-c-connector-enveloppe.scad>
+use <../enveloppes/usbCConnectorEnveloppe.scad>
 use <../enveloppes/bolt.scad>
 
 
