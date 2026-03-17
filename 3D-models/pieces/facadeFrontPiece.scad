@@ -1,5 +1,5 @@
 use <./subpieces/roundedPane.scad>
-use <../assets/breadboard/breadboard.scad>
+use <../openscad_modules/breadboard/breadboard.scad>
 use <../enveloppes/screenEnveloppe.scad>
 use <../libraries/commons.scad>
 

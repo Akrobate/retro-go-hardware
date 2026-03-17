@@ -1,6 +1,6 @@
 include <./../configurations/global.scad>
 use <./../libraries/commons.scad>
-use <../assets/breadboard/breadboard.scad>
+use <../openscad_modules/breadboard/breadboard.scad>
 use <./subpieces/roundedPane.scad>
 use <../enveloppes/speaker28mmThrowsEnveloppe.scad>
 

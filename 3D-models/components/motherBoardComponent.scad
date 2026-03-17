@@ -1,6 +1,6 @@
 include <../configurations/global.scad>
 
-use <../assets/breadboard/breadboard.scad>
+use <../openscad_modules/breadboard/breadboard.scad>
 use <../pieces/boltJoinMotherBoardPiece.scad>
 
 use <../libraries/commons.scad>

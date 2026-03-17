@@ -1,4 +1,4 @@
-use <../assets/breadboard/breadboard.scad>
+use <../openscad_modules/breadboard/breadboard.scad>
 use <./../pieces/subpieces/simpleButton.scad>
 
 use <./../pieces/controllerFacadePiece.scad>

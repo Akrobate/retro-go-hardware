@@ -1,5 +1,5 @@
 
-use <../../assets/breadboard/breadboard.scad>
+use <../../openscad_modules/breadboard/breadboard.scad>
 use <./directionalCross.scad>
 use <../../enveloppes/bolt.scad>
 use <./roundedPane.scad>
