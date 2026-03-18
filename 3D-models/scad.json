@@ -5,7 +5,8 @@
   "author": "",
   "repository": "",
   "dependencies": {
-    "breadboard": "https://gitlab.com/openscad-modules/breadboard.git",
+    "battery": "https://gitlab.com/openscad-modules/battery.git#0.0.1",
+    "breadboard": "https://gitlab.com/openscad-modules/breadboard.git#0.0.1",
     "tp4056-holder": "https://gitlab.com/openscad-modules/tp4056-holder.git"
   }
 }

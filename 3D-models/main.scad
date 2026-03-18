@@ -1,10 +1,11 @@
 use <./components/gamePadComponent.scad>
-use <./assets/battery/battery.scad>
 use <./components/housingComponent.scad>
 use <./components/screenComponent.scad>
 use <./components/motherBoardComponent.scad>
 use <./components/usbChargerComponent.scad>
 
+
+use <./openscad_modules/battery/battery.scad>
 use <./assets/on-off-button/on-off-button.scad>
 use <./assets/speaker-28mm/speaker-28mm.scad>
 
