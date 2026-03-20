@@ -1,6 +1,6 @@
 include <../assets/lcd-screen/configurations.scad>
 
-use <../libraries/commons.scad>
+use <../openscad_modules/commons/forEachCoord.scad>
 
 /**
  * screenFixationThrows

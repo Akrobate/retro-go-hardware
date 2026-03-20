@@ -1,7 +1,7 @@
 use <./subpieces/roundedPane.scad>
 use <../openscad_modules/breadboard/breadboard.scad>
 use <../enveloppes/screenEnveloppe.scad>
-use <../libraries/commons.scad>
+use <../openscad_modules/commons/forEachCoord.scad>
 
 include <../configurations/global.scad>
 include <../assets/lcd-screen/configurations.scad>
