@@ -1,4 +1,4 @@
-use <./subpieces/roundButton.scad>
+use <../openscad_modules/button/roundButton/roundButton.scad>
 
 include <../configurations/global.scad>
 
