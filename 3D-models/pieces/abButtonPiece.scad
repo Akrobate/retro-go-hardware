@@ -1,4 +1,4 @@
-use <./subpieces/roundButton.scad>
+use <../openscad_modules/button/roundButton/roundButton.scad>
 
 include <../configurations/global.scad>
 
@@ -18,7 +18,6 @@ module abButtonPiece(
     support_z_size = controller_a_b_button_support_z_size,
     $fn = controller_a_b_button_fn
 ) {
-
     color("Crimson")
         roundButton(
             diameter,
@@ -29,4 +28,10 @@ module abButtonPiece(
         );
 }
 
+/**
+ * @stl
+ * @png
+ * @colorscheme BeforeDawn
+ * @view axes,scales
+ */
 abButtonPiece();
